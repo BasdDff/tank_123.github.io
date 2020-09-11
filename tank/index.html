@@ -1,0 +1,522 @@
+<!--В HTML все является тегами(картинки ссылки и тд)-->
+
+<!--В начале записывается непарный тег 	DOCTYPE html, он указывает версию html
+Чтобы браузер «не путался» и понимал, согласно какому стандарту отображать веб-страницу.  Это для HTML 5 -->
+ <!DOCTYPE html> 
+ <!-- После чего записывается парный тег html и в него записывается теги head и body
+html нужен чтобы взять всю нашу страницу в некий контейнер и в нем два парных тега head и body
+body - тело всей нашей страницы (все что сюда пишем будет отображаться на странице
+head - мета информация, это то что на странице не будет отображаться,
+в нее можно указать название страницы(вкладки) в браузере с помощью тега title и аватарку страницы-->
+<html>
+	<head>
+		<!--Мета тег <meta charset> нужен для того, чтобы указать в какой кодировке идет наша страницa-->
+		<meta charset="UTF-8">
+		<!-- Тег <title> Название сайта на вкладке-->
+		<title> 
+		Аквариум 
+		</title>
+		<style> </style>
+		
+		<!-- (CSS)Тег <link> нужен, чтобы подключить наш CSS файл. У него есть 3 обязательных атрибута: 
+			1)Атрибут href(ссылка), указывает путь css файла
+			2)Атрибут rel, указывает отношения с этим файлом
+			3)Атрибут type, указывает тип подключаемого файла. -->
+		<link href="my_styles.css" rel="stylesheet" type="text/css">
+		
+		<!-- Тег <script> вмещает в себя JavaScript код прямо в нашем html документе (2-й способ подключения JavaScript - отдельным файлом,
+		как CSS). Обязательный атрибут: type="text/javascript". Но лучше будет подключить наш javascript файл отдельно.
+		Для этого используем атрибут src="script.js"-->
+		<!--jQuery — набор функций JavaScript, фокусирующийся на взаимодействии JavaScript и HTML. ОН ДОЛЖЕН ПОДКЛЮЧАТЬСЯ ПЕРВЫМ,
+		до наших скриптов. Он облегчает нам жизнь. -->
+		<script type="text/javascript" src="jquery-3.5.1.min.js"> </script>
+		<script type="text/javascript" src="script.js"> </script>	
+		
+		
+	</head>
+	
+	<body bgcolor="#fa8e47">
+		<!--у тега <body> атрибут vlink который определяет цвет посещенных ссылок, 
+		т.е., таких ссылок, на которые пользователь уже «нажимал». vlink="#660066"
+		Атрибут link устанавливает цвет непосещенных ссылок. link="цвет">
+		Атрибут background делает фоновое изображение на сайте. background="images/background.jpg" 
+		Атрибут bgcolor делает цвет фона веб-страницы(можно использовать вместе с background). bgcolor="цвет"
+			[Голубой #00ffff] [Черный #000000] [Синий #0000ff] [Фуксия #ff00ff] [Серый #808080] [Зеленый #008000] 
+			[Светло-зеленый #00ff00] [Темно-красный #800000] [Темно-синий #000080] [Оливковый #808000] [Фиолетовый #800080]
+			[Красный #ff0000] [Светло-серый #c0c0c0] [Сине-зеленый #008080] [Белый #ffffff] [Желтый #ffff00]
+		Атрибут text меняет цвет текста используемого по умолчанию(то есть весь текст будет теперь другого цвета по умолчанию)
+		Все также цвета отдельных элементов можно легко изменять с помощью стилей. text="цвет"
+		-->
+
+		<!-- Тег <address> предназначен для хранения информации об авторе и может включать в себя любые элементы HTML 
+		вроде ссылок, текста, выделений и т.д. Планируется, что поисковые системы будут анализировать содержимое этого тега 
+		для сбора информации об авторах сайтов. С помощью атрибута true можно скрыть внешне эту информацию-->
+		<address hidden="true">
+		Этот сайт сделал я. Если вы хотите использовать мои статьи то идите naxyi. Я вам не разрешаю. Хотя можете попробовать
+		написать мне и я подумаю.
+		</address>
+		<!-- Тег <article> задает содержание сайта вроде новости, статьи, записи блога, форума или др. -->
+		<article> Этот сайт создан в целях обучения и развития. </article>
+		
+		<!--Тег <a> создает ссылки href специальный атрибут для ссылок
+		Атрибут href - Задает адрес документа, на который следует перейти(ссылка).
+		Атрибут target - этот атрибут нужен для того, чтобы указать тегу 'a' где открыть ссылку
+			Его параметры:
+			_blank Загружает страницу в новое окно браузера.
+			_self Загружает страницу в текущее окно(по умолчанию) 
+		Атрибут download(сначала указываем ссылку потом этот как 2 атрибут
+			Предложит скачать документ 
+		Атрибут hreflang 
+			Указывает язык документа, на который ведет ссылка.
+			В его параметры указываем Код языка (тут можно посмотреть http://htmlbook.ru/html/value/lang)
+		Атрибут rel
+			Определяет отношения между текущим документом и документом, на который ведет ссылка
+			Можно например использовать чтобы добавить сайт в избранное браузера параметр - sidebar. 
+			Пока значение sidebar поддерживают два браузера — Firefox и Opera, 
+			остальные игнорируют атрибут rel и переходят по указанной ссылке как обычно. В Chrome работать не будет
+		Атрибут type
+			Нужен чтобы перед ссылкой установить фотографию, например значок ютуба что ссылка ведет туда.
+			Атрибут type должен добавляться только при наличии атрибута href(то есть вторым), можно использовать и в других тегах
+			Важно что адрес где храниться картинка для ссылки указывается в <head> в разделе <style>
+			И в разделе style нельзя писать коментарии, иначе работать не будет -->
+		Youtube нажми сюда--> 
+		<a href="https://www.youtube.com/ " target="_blank"> click </a>
+		<br>
+		<a href="https://www.lexico.com/definition/dictionary" hreflang="en"> Английские слова с примерами </a>
+		<p> <a href="https://www.lexico.com/definition/dictionary" rel="sidebar"> Добавить в избранное </a> </p>
+		<a href="https://www.lexico.com/definition/dictionary" target="_blank"> Перейти на главную страницу </a>
+		<p> <a id="a4" href="video/ЛОЗОВОН.exe.mp4"	> Ссылка на видео </a> </p>
+	
+		<div>
+		
+		<!--Тег заголовка <h1-6> -->
+		<h1> 
+		Заголовок 1 
+		</h1>
+		<h2> 
+		Заголовок 2 
+		</h2>
+		<h3> 
+		Заголовок 3
+		</h3>
+		<h4> 
+		Заголовок 4
+		</h4>
+		<h5> 
+		Заголовок 5
+		</h5>
+		<h6>
+		Заголовок 6 
+		</h6>
+
+		<!--Тег <strong> делает шрифт жирным-->
+		<strong> жирный текст </strong>
+		<!-- Тег <b> тоже делает шрифт жирным
+			Тег <strong> определяет важность отмеченного текста.
+			Тег <b> предназначен для выделения текста без придания ему особой важности.
+			Лучше всего отличия этих тегов будут заметны людям, которые используют специальные настройки ОС, 
+			в частности, слепым и слабовидящим. Когда они включают функцию чтения текста, то «говорилка» будет 
+			интонацией выделять слова с тегом <strong>. -->
+		<b> жирный текст </b>
+
+		<!--Тег <em> делает шрифт курсивом-->
+		<em> 
+		курсив 
+		</em>
+
+		<!--Тег <small> уменьшает шрифт на 1 еденицу.В HTML размер шрифта измеряется в условных единицах от 1 до 7, 
+		средний размер текста, используемый по умолчанию, принят 3. Такие же вложенные теги будут уменьшать еще на 1.-->
+		<small> привет </small>
+
+		<!--Тег <big> увеличивает шрифт на 1 еденицу -->
+		<big><big> пока </big></big>
+
+
+		<!--Тег <br> делает переход на следующую строку(как endl в C++) -->
+		1) Один<br>
+		2)Два<br>
+		3)Три<br>
+		4)Четыре<br>
+		5)Пять<br>
+
+		<!-- Тег <p>  делает переход на новую строку с отбивкой(пустой строкой)-->
+		<p id="abzac">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+		</p>
+		<p>
+		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		
+		<!-- Теги, с помощью которых можно создавать списки  <ol> <ul> 
+		<ol> = ORDERED LIST упорядоченный список, элементы данного списка нужно указать в тег <li>-->
+		<ol>
+			<li> 	Раз </li>
+			<li>  Два </li>
+			<li> 	Три </li>	
+		</ol>
+		<!-- <ul> = UNORDERED LIST неупорядоченный список (вместо цифр точки жирные) -->
+		<ul>
+			<li> 	Раз 	</li>
+			<li>  Два </li>
+			<li> 	Три </li>	
+		</ul>
+		
+		<!-- Тег <img> нужен для того, чтобы вставить какую-нибудь картинку 
+		Путь где лежит картинка нужно указывать в атрибуте src 
+		Так как наш html документ лежит в той же папке где и картинка, указываем только ее название
+		Если например изображение лежит в отдельной папке то указываем имя папки и символ /
+		Для изменения размера изображения есть два атрибута:
+		wigth(ширина) height высота  Картинка деформируется, так как мы затрагиваем два атрибута
+		Чтобы этого небыло, стоит изменять только один атрибут, ширину или высоту -->
+		<img src="images/hqdefault.jpg" width="1000px" height="300px">	
+		
+		<!-- Тег <table> делает таблицы. Внутри указываем теги 'tr' (строка) 'td' (колонка)
+		Для колонки в первый раз указываем тег 'th' тем самым делаем названия колонок жирным шрифтом
+		У таблиц есть атрибут 'border' (граница) в скобках толщина обводки
+		-->
+		<table border="1" id="a9">
+			<tr id="a10"> 
+				<th> Имя </th>
+				<th> Фамилия </th>
+				<th> Телефон </th>
+			</tr>
+			<tr> 
+				<td> вцвцвц </td>
+				<td> вццввц </td>
+				<td> 5151665 </td>
+			</tr>
+			<tr> 
+				<td> ВЦВЦЦ </td>
+				<td> вцццв </td>
+				<td> 2662616 </td>
+			</tr>
+			<tr> 
+				<td> Уууауц </td>
+				<td> ЦВвцвц </td>
+				<td> 242727 </td>
+			</tr>
+		</table>
+		
+		<!-- Тег <input> (ввод) непарный в который можно что-то вводить (например поиск в википедии)
+		У него могут быть разные атрибуты, например:
+		placeholder - текст который исчезает при получении фокуса  
+		type - значения этого атрибута: [search - поле для поиска] [submit - кнопка для отправки данных формы на сервер]
+			[name - ] [hidden - скрытое поле, оно никак не отображается на веб-странице]
+			[                   -->
+		<form> <!--Тег <form> Связывает поле с формой по её идентификатору. 
+		Хотя элемент <input> не требуется помещать внутрь контейнера <form>, определяющего форму, но если введенные пользователем
+		данные должны быть отправлены на сервер, где их обрабатывает серверная программа, то указывать <form> обязательно.-->
+			<input placeholder="Search">
+			<input type="search">
+			<input type="submit" value="Найти">
+		</form>
+		<form action="http://google.com/search" target="_blank">
+			<input type="search" name="q">
+			<input type="hidden" name="as_sitesearch" value="file:///C:/Users/persw/Desktop/HTML/test.html"> 
+			<input type="submit" value="Найти">
+		</form>
+		<!-- Тег <textarea> (парный)  Для ввода "большого" текста-->
+		<textarea> </textarea>
+		
+		<!-- Тег <audio> (парный) нужен для создания аудио плеера на странице.
+		Внутри контейнера <audio> можно написать текст, который будет выводиться в браузерах, не работающих с этим тегом.
+		В нем нужно указать еще один непарный тег 'source' в котором указываем путь к аудио файлу или
+		с помощью атрибута src, и также еще нужно указать тип данного аудиофайла через атрибут type  
+		Атрибут controls нужен, чтобы был виден аудиоплеер controls="controls"
+		Атрибут autoplay нужен, чтобы аудио начало играть сразу после загрузки страницы autoplay="autoplay"
+		Атрибут loop нужен, чтобы аудио зацикливалось(повторялось) с начала после завершения loop="loop"
+		Атрибут preload нужен, для загрузки аудио вместе с веб-страницой(игнорируется если установлен autoplay)
+			Это удобно для того, когда не нужно файл воспроизводить сразу после его загрузки, 
+			но он должен быть подготовлен для срочного воспроизведения
+			Параметр auto загружает аудиофайл целиком при загрузке страницы
+			Параметр metadata загружает только служебную информацию (продолжительность звучания и др.).
+			Параметр none не загружает аудиофайл. -->
+		<audio controls preload="auto">
+			<source src="music/Demise - Ethan Meixsell.mp3" type="audio/mpeg">
+			 Тег audio не поддерживается вашим браузером. 
+		</audio>
+		
+		<!-- Тег <video> -->
+		<video controls width="200px">
+			<!-- <source src="video/Название.mp4" > -->
+		</video>
+		
+		<!-- Тег <abbr> Расшифровывает аббревиатуру. У него есть параметр title который добавляет всплывающую подсказку которая
+		выдает расшифровку аббревиатуры.-->
+		<p> <abbr title="базовая система ввода-вывода(Basic Input/Output System)"> BIOS </abbr>- это набор микропрограмм, 
+		реализующих API для работы с аппаратурой компьютера и подключёнными к нему устройствами. </p>
+    
+		<!-- Тег <acronym> указывает на то, что текст является акронимом. (По сути он чем-то там отличается от аббривеатуры, но я в душе 
+		не знаю чем и мне это не интересно. По умолчанию, текст заключенный в контейнере <acronym> подчеркивается пунктирной линией.-->
+		
+		<!-- Тег <aside> Определяет блок сбоку от контента для размещения рубрик, ссылок на архив, меток и другой информации. 
+		Такой блок, как правило, называется «сайдбар» или «боковая панель». 
+		Оформление этого блока создается в теге <head> в теге <style> (или в CSS файле (по id сделал)) 
+		-->
+		<aside id="a5"> <p> Экономьте чай! </p> <p> Рецепты </p> </aside>
+		
+		<!--Тег 'area' определяет области изображения которые будут являться ссылками, и нажимая туда будете переходить на другой сайт/страницу и тд.
+		Это называют картой-изображением. Внешне она не отличается от обычного изображения, но при этом разбито на невидимые зоны разной
+		формы и эти области являются ссылками. 
+		Тег <area>: 
+		Атрибут shape задает форму области (circle-окружность, default-вся область, poly-в виде полигона(многоугольник)
+			rect-прямоугольная область)
+		Атрибут coords задает размеры(координаты области где будет ссылка)
+			Для circle определяется три координаты — координаты центра окружности (X, Y) и ее радиус (R)
+			Для poly последовательно указываются координаты каждой вершины (X1, Y1, X2, Y2)
+			Для rect определяется четыре координаты — X1, Y1, X2, Y2
+		Атрибут href задает ссылку все атрибуты ссылок доступны.
+		Атрибут alt - не понял что это
+		Этот тег всегда распологается в теге 'map' который связывает координаты невидимых зон(ссылок) с изображением.
+			Служит контейнером для элементов 'area', которые определяют активные области для карт-изображений.
+			У тега <map> есть обязательный атрибут name - имя идентификатора, которое однозначно определяет карту-изображение
+			Значение атрибута name тега <map> должно соответствовать имени в usemap. 
+			При этом значение атрибута usemap тега <img> начинается с символа решетки.
+			То есть у нужного нам изображения мы делаем атрибут usemap который связывает между собой картинку и карту-изображение
+			и у тега <map> делаем атрибут name и записываем туда одинаковые названия. -->
+		<div id="title"> <img src="images/ecctitle.png" width="640" height="158" alt="Детский образовательный центр"><br>
+			<img src="images/navigate.png" width="640px" height="30px" alt="Навигация по сайту" usemap="#Navigation"> </div>
+		<p><map name="Navigation">	
+			<area shape="poly" coords="113,24,211,24,233,0,137,0" href="https://www.youtube.com/watch?v=0kRNzdEs5i0" target="_blank" alt="Информация">
+			<area shape="poly" coords="210,24,233,0,329,0,307,24" href="activity.html" alt="Мероприятия">
+			<area shape="poly" coords="304,24,385,24,407,0,329,0" href="depart.html" alt="Отделения">
+			<area shape="poly" coords="384,24,449,24,473,0,406,0" href="techinfo.html" alt="Техническая информация">
+			<area shape="poly" coords="449,24,501,24,525,0,473,0" href="study.html" alt="Обучение">
+			<area shape="poly" coords="501,24,560,24,583,0,525,0" href="work.html" alt="Работа">
+			<area shape="poly" coords="560,24,615,24,639,0,585,0" href="misk.html" alt="Разное">
+		</map></p> 
+		
+		<!--Тег <code> предназначен для записи в него програмного кода(Но только ОДНОЙ СТРОКИ)(например С++), код будет другим шрифтом.-->
+		<code> #include<iostream> </code>
+		<!-- Тег <pre> запишет наш код С++ со всеми пробелами отступами и переходами на новую строку 
+		Чтобы < > не обрабатывались в тегах, нужно написать &lt; (lt - это скобка < ) &gt; (gt - это скобка > )-->
+		<pre>
+		
+	Динамический массив на С++ 
+	#include &lt;iostream&gt;
+	#include &lt;ctime&gt;
+	using namespace std;
+
+	void main()
+	{
+		int size = 0;
+		cout << "enter array size" << endl;
+		cin >> size;
+
+		int* arr = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+		arr[i] = rand() % 10;
+		}
+
+		for (int i = 0; i < size; i++)
+		{
+		cout << arr[i] << "\t";
+		cout << *(arr + i) << endl;
+		}
+	
+		delete[]arr;
+	} </pre>
+
+		<!-- Тег <object> сообщает браузеру, как загружать и отображать объекты, которые исходно браузер не понимает.
+		<p> <object type="application/x-shockwave-flash"  data="video/ЛОЗОВОН.exe.mp4" width="400" height="300">
+		<param name="quality" value="high">
+		<param name="wmode" value="opague"> </object> </p> Пока не понимаю и не работает.-->
+		
+		<!-- Тег <span> нужен, чтобы выделить часть информации внутри других тегов, и установить для нее свой стиль.
+		В теге добавляем атрибут class или id (Для CSS)-->
+		<p><span class="letterrr">Р</span>азумные люди приспосабливаются к окружающему миру. 
+		Неразумные люди приспосабливают мир к себе. Вот почему прогресс определяется 
+		действиями неразумных людей.</p> 
+		<p>Бернард Шоу</p>
+		
+		<!-- Тег <center> выравнивает содержимое контейнера по центру относительно родительского элемента-->
+		<center>
+			<p>Разум — это Будда, а прекращение умозрительного мышления — это путь. 
+			Перестав мыслить понятиями и размышлять о путях существования и небытия, 
+			о душе и плоти, о пассивном и активном и о других подобных вещах, 
+			начинаешь осознавать, что разум — это Будда, 
+			что Будда — это сущность разума, 
+			и что разум подобен бесконечности.
+			</p>
+		</center>
+		
+		
+		
+		
+	</div>
+		
+		
+		
+		
+		
+		
+											<!--ИЗУЧЕНИЕ CSS, JavaScript, jQuery -->
+											
+											
+		
+		<!-- (CSS)Параметр - идентификатор(id) здесь, чтобы сделать ссылку отличительной от других, и выдать ей уникальный
+		цвет. Обязательно идентификатор нужно начинать с буквы(с цифры нельзя) -->
+		<a id="a1" href="https://www.youtube.com/" download> Скачать файл </a>
+		
+		<!--Тег 'div' является тегом контейнера, если проще то тегом блока 
+		Внутри этого блока вписывают другие разные блоки чтобы объеденить их в одну группу
+		То есть можно группировать разные области 
+		(CSS)Чтобы сменить цвет текста воспользуемся CSS -->		
+		<div> Этот текст синий </div>
+
+		<!--(CSS)Параметр - класс(class) 
+		Обязательно класс нужно начинать с буквы(с цифры нельзя)   
+		Здесь у животных по два класса, в animal будет меняться размер текста, а в вторых классах цвета, то есть можно сказать
+		что первый класс у них общий(наследуется) -->	
+		<p> </p>
+		
+		<a href="#" class="human">Человек </a> <br>
+		<a href="#" class="human">Человек </a> <br>
+		<a href="#" class="human">Человек </a> <br>
+		<a href="#" class="animal lion">Животное </a> <br>
+		<a href="#" class="animal monkey">Животное </a> <br>
+		
+		<!-- -->
+		<div class="message">Привет, мир! </div>
+		<div class="message2">Черный телефон </div>
+		
+		<div class="dinamic_navedenie">Привет, мир!!! </div>
+		<div> 
+			<a href="https://www.youtube.com/" class="visited_href"> Ссылка </a> <br>
+			<a href="https://www.youtube.com/" class="visited_href"> Ссылка </a> <br>
+			<a href="https://www.youtube.com/" class="visited_href"> Ссылка </a> <br>
+		</div>
+		
+		<div id="a2"> CSS3 </div>
+		
+		<div id="a3"> 
+		Duis te feugifacilisi. Duis autem dolor in hendrerit in vulputate velit esse molestie 
+		consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et 
+		iusto odio dignissim qui blandit praesent luptatum zzril delenit au gue duis dolore
+		te feugat nulla facilisi. Ut wisi enim ad minim veniam, quis nostrud exerci taion 
+		ullamcorper suscipit lobortis nisl ut aliquip ex en commodo consequat. Duis te 
+		feugifacilisi per suscipit lobortis nisl ut aliquip ex en commodo consequat. </div>
+		
+		<div id="a6"> <img src="images/8kphoto.jpg" width="500px" >	 </div>
+		
+		<div id="a7">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.</div>
+		<div>Duis autem dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit au gue duis dolore te feugat nulla facilisi. </div>
+		
+		<div id="a8"> Duis te feugifacilisi. Duis autem dolor in hendrerit in vulputate velit esse molestie 
+		consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et 
+		iusto odio dignissim qui blandit praesent luptatum zzril delenit au gue duis dolore
+		te feugat nulla facilisi. Ut wisi enim ad minim veniam, quis nostrud exerci taion 
+		ullamcorper suscipit lobortis nisl ut aliquip ex en commodo consequat. Duis te 
+		feugifacilisi per suscipit lobortis nisl ut aliquip ex en commodo consequat. </div>
+		
+		<div id="a11"> Привет привет привет важность писать курсив </div>
+		
+		<!--Выпадающее меню(CSS) -->
+		<div class="side">
+			<ul class="menu">
+				<li class="menu_list"> <a id="a12" href="#"> Пункт 1 </a>
+					<ul class="menu_drop">
+						<li> <a id="a12" href="#"> Подпункт 1 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 2 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 3 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 4 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 5 </a> </li>
+					</ul>
+				</li>
+				<li> <a id="a12" href="#"> Пункт 2 </a> </li>
+				<li class="menu_list"> <a id="a12" href="#"> Пункт 3 </a>
+					<ul class="menu_drop">
+						<li> <a id="a12" href="#"> Подпункт 1 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 2 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 3 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 4 </a> </li> 
+						<li> <a id="a12" href="#"> Подпункт 5 </a> </li>
+					</ul> 
+				</li>
+				<li> <a id="a12" href="#"> Пункт 4 </a> </li>
+				<li class="menu_list"> <a id="a12" href="#"> Пункт 5 </a>
+					<ul class="menu_drop">
+						<li> <a id="a12" href="#"> Подпункт 1 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 2 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 3 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 4 </a> </li>
+						<li> <a id="a12" href="#"> Подпункт 5 </a> </li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+	<div id="vmeste">	
+		<div id="pribavlenie">
+		<font color="red"> Прибавление </font> <br> <!-- Тег <font> позволяет изменять размер и цвет шрифта-->
+			<input id="value1" type="number"> <br> <!-- Атрибут type со значением number разрешит ввод только цифр  -->
+			<input id="value2" type="number"> <br>
+			<button>Посчитать! </button> 
+		<!-- Теоретически, тег <button> должен располагаться внутри формы, устанавливаемой элементом <form>
+		Тем не менее, браузеры не выводят сообщение об ошибке и корректно работают с тегом <button>, если он встречается самостоятельно.
+		Однако, если необходимо результат нажатия на кнопку отправить на сервер, помещать <button> в контейнер <form> обязательно.--> 
+			<div id="value3">
+				result
+			</div>
+		</div>	
+		
+		<div id="pribavlenie">
+		<font color="red"> Отнимание </font> <br>
+			<input id="value4" type="number"> <br> <!-- Атрибут type со значением number разрешит ввод только цифр  -->
+			<input id="value5" type="number"> <br>
+			<button>Посчитать! </button>
+			<div id="value6">
+				result
+			</div>
+		</div>
+		
+		<div id="pribavlenie">
+		<font color="red"> Умножение </font> <br>
+			<input id="value7" type="number"> <br>
+			<input id="value8" type="number"> <br>
+			<button>Посчитать! </button>
+			<div id="value9">
+				result
+			</div>
+		</div>
+	</div>
+	
+		<div id="name">Ваше имя </div>
+		
+		<div id="a13">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem</div>
+		
+		<!-- Тег <i> Устанавливает курсивное начертание шрифта. Допустимо использовать этот тег совместно с другими тегами, которые определяют начертание текста.-->
+
+		
+		<div id="a15">
+		<a id="a14" style="color:#32CD32" align="center" href="https://drugakadrian.000webhostapp.com/" target="_blank"><b><i>Главная</i></b></a>
+        <a id="a14" style="color:#32CD32" align="center" href="https://worldofwarcraft.com/ru-ru/game/new-players-guide" target="_blank"><b><i>Как начать играть?</i></b></a>
+        <a id="a14" style="color:#32CD32" align="center" href="https://vk.com/worldofwarcraft" target="_blank"><b><i>Группа ВК</i></b></a>
+        <a id="a14" style="color:#32CD32" align="center" href="https://eu.battle.net/shop/ru/product/game/wow" target="_blank"><b><i>Магазин</i></b></a>
+        <a id="a14" style="color:#32CD32" align="center" href="https://www.youtube.com/channel/UCbLj9QP9FAaHs_647QckGtg" target="_blank"><b><i>YouTube</i></b></a>
+        <a id="a14" style="color:#32CD32" align="center" href="https://eu.battle.net/login/ru/?ref=https://eu.battle.net/shop/ru/product/game/wow&app=shop" target="_blank"><b><i>Вход/Регистрация</i></b></a>
+		<p style="color:#DCDCDC">Вступительные ролики</p>
+			<div id="a16">
+				<iframe width="500" height="315" src="https://www.youtube.com/embed/AkhjrRR9J7A?autohide=1&color=white&showinfo=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
+				<iframe width="500" height="315" src="https://www.youtube.com/embed/HW9a6RDEPF0?autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+				<iframe width="500" height="315" src="https://www.youtube.com/embed/hmHY6hERT3s?autohide=1&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+		<p style="color: white">В дополнении World of Warcraft: Legion появится целое множество новинок, благодаря которым вы сможете вступить в элитный передовой отряд Азерота для борьбы с наступающей скверной. Ощущения от игры станут еще более яркими! Также мы улучшим систему трансмогрификации, чтобы вы могли собирать разные облики предметов и сохранять наиболее понравившиеся, не тратя драгоценное место в сумках. Мы планируем внедрить совершенно новую систему PvP и PvP-талантов, наград и развития персонажа. Кроме того, вас ждет улучшение поддержки внутриигровых сообществ. Во времена, когда весь Азерот содрогается перед лицом нависшей угрозы, поиск новых союзников становится важным, как никогда раньше.</p>
+		<p style="color: red">Отправляйтесь в эпицентр вторжения демонов — на Расколотые острова, полные древних чудес. Исследуйте густые леса, высокие горные хребты и старинные города ночных эльфов. Но помните, что угроза повсюду: порочные сатиры, дикие дрогбары и отвратительные квалдиры рыщут повсюду, не говоря уже об армии Легиона. Займите оплот своего класса, и соратники помогут вам отыскать столпы созидания — секрет спасения Азерота. </p>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
