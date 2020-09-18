@@ -5,4 +5,8 @@ $(document).ready(function(){
 		autoplay: true, //Автоматическая прокрутка слайдов
 		autoplayTimeout: 5000 //Время за которое будут обновляться слайды
 	});
+	
+	
+	
+	
 });

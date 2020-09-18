@@ -5,6 +5,8 @@ body
 	color: black;
 	font-weight: 300; 
 	min-width: 960px; /*Свойство - устанавливает минимальную ширину элемента*/
+	background-color: #d6d6d6;
+	margin: 0 25px;
 }
 .wrapper
 {
@@ -37,7 +39,7 @@ body
 }
 .navi ul li a
 {
-	color: #ccc;
+	color: black;
 	display: block; /*Делаем ссылки блочными элементами*/
 	padding: 8px 12px; /*Сверху снизу по 8 пикселей, справа слева по 12*/
 	text-decoration: none; /*Чтобы ссылки не подчеркивались*/
@@ -72,11 +74,16 @@ body
 	background-repeat: no-repeat;
 	height: 435px; /*Высоту должны задать именно здесь, у каждого слайда, т.к. они имеют нулевую высоту и мы их не увидим если зададим в другом месте*/
 	/*padding-top: 60%;*/
-	background-position: left left;
+	
 }
 .page_row
 {
-	width: 640px; 
+	width: 640px;
+}
+.page_row
+{
+	display: inline-block; /*Нужно, чтобы наш слайдер занимал пространство только под свой контент, и не больше
+	до этого выделялось все оранжевым*/
 }
 .slider .owl-dot span 
 {
@@ -111,14 +118,93 @@ body
 	right: 0;
 }
 
+.infoAboutServiceCenter
+{
+	float: right;
+	width: 1200px;
+	height: 435px;
+	background-color: #c2c0c0;
+	border: 1px solid black; 
+}
+#a1
+{
+	font-size: 20px;
+	color: black;
+}
+#a2
+{
+	font-size: 20px;
+	color: black;
+}
 
+#a3
+{
+	display: inline-block;
+	padding: 30px;
+	background-color: #c2c0c0;
+	font-size: 40px;
+	border: 1px solid black; 
+}
 
-
-
-
-
-
-
+.grid
+{
+	/*display: flex;
+	flex-direction: row;
+	justify-content: center;*/ /*Можно сделать так*/
+	text-align: center;
+	border: 1px solid black; 
+	/*position: relative;*/		
+}
+.grid_repair_item
+{
+	opacity: 1.0;
+	text-align: center;
+}
+.grid_repair_item:hover
+{
+	/*opacity: 0.7;*/
+}
+.one-section
+{
+	display: inline-block; /*Или можно сделать так , так будет при увеличении нормально будет*/ 
+	width: 500px;
+    /*height: 900px;*/
+	margin: 15px;
+	background-color: #c2c0c0;
+	
+}
+.text_1
+{
+	
+	height: 250px; /*Увеличивает блоки с текстом*/
+}
+.text_2
+{
+	height: 307px; /*Увеличивает блоки с текстом*/
+}
+.one-section:hover
+{
+	background: rgba(0, 0, 0, 0.3);
+	color: white;
+	transition: 1.0s;
+}	
+p
+{
+	font-size: 25px;
+	text-align: left;
+	padding: 0px 17px;
+}
+.li
+{
+	font-size: 25px;
+	text-align: left;
+	padding: 0px 17px;
+}
+.main_p /*Названия блоков*/
+{
+	font-size: 35px;
+	font-weight: 900;
+}
 
 
 
