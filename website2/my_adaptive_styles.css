@@ -1,0 +1,21 @@
+@media screen and (max-width: 992px) /*Эти стили будут применены для экранов с шириной 992px либо меньше */
+{
+	body
+	{
+		font-size: 90%;
+	}
+	section
+	{
+		font-size: 80%;
+	}
+	
+}
+
+@media screen and (max-width: 1085px) /*Эти стили будут применены для экранов с шириной 992px либо меньше */
+{
+	body
+	{
+		margin-right: 25px;
+	}
+	
+}
