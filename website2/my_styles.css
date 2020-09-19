@@ -126,6 +126,10 @@ body
 	background-color: #c2c0c0;
 	border: 1px solid black; 
 }
+#a0
+{
+	font-size: 30px;
+}
 #a1
 {
 	font-size: 20px;
@@ -154,6 +158,16 @@ body
 	text-align: center;
 	border: 1px solid black; 
 	/*position: relative;*/		
+	
+}
+.section_1
+{
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+.section_2
+{
+	margin-bottom: 10px;
 }
 .grid_repair_item
 {
@@ -162,7 +176,7 @@ body
 }
 .grid_repair_item:hover
 {
-	/*opacity: 0.7;*/
+	opacity: 0.7;
 }
 .one-section
 {
@@ -205,6 +219,83 @@ p
 	font-size: 35px;
 	font-weight: 900;
 }
+
+
+
+/*О нас */
+#our_advantages
+{
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+.icon_item
+{
+	display: inline-block; /* div(block - элементы) делаем inline элементами*/
+	width: 100px;
+	height: 100px;
+	background-color: #c2c0c0;
+	text-align: center; /*Чтобы картинка была по центру фона (по оси X)*/
+	border-radius: 50%; /*Делаем фон круглым*/
+}
+.icon_item_image
+{
+	/*max-width: 100%;*/
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%); /*По оси Y картинка будет по центру*/
+}
+.icons
+{
+	display: -webkit-box; /*Для кроссбраузерности здесь стоит добавить префиксные свойства*/
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row; /*flex элементы должны идти в ряд*/
+	
+	
+}
+.icon
+{
+	width: 33.333%; /*Ширина каждого элемента*/
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	text-align: center;
+	padding: 5px;
+}
+.icon:nth-of-type(3)  /*в (можно 3n), или можно написать :last-child, или сделать доп.класс(или айди) и написать туда*/ 
+{
+	border-right: 0px solid black; /*Отменить рамку справа где она двойная(останется одна, из #our_advantages)*/
+}
+.h3
+{
+	text-align: center;
+	font-size: 30px;
+}	
+.about_icon_info
+{
+	font-size: 25px;
+	margin-top: 3px; 
+	margin-bottom: 3px;
+}
+.info_h5
+{
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
