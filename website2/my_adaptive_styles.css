@@ -21,6 +21,29 @@
 	{
 		margin-bottom: 25px;
 	}
+	.text_2
+	{
+		height: 325px;
+	}
+	.infoAboutServiceCenter
+	{
+		font-size: 20px;
+	}
+	#a0
+	{
+		font-size: 40px;
+	}
+	#a1
+	{
+		font-size: 30px;
+		color: black;
+	}
+	#a2
+	{
+		font-size: 30px;
+		color: black;
+	}
+	
 }
 
 @media screen and (max-width: 992px) /*Эти стили будут применены для экранов с шириной 992px либо меньше */
