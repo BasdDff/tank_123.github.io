@@ -17,9 +17,21 @@
 	{
 		margin-right: 25px;
 	}
+	.wrapper
+	{
+		text-align: center;
+	}
+	#sidebar
+	{
+		font-size: 30px;
+	}
+	li
+	{
+		font-size: 30px;
+	}
 	.header
 	{
-		margin-bottom: 25px;
+		margin-bottom: 50px;
 	}
 	.text_2
 	{
@@ -27,7 +39,7 @@
 	}
 	.infoAboutServiceCenter
 	{
-		font-size: 20px;
+		font-size: 19px;
 	}
 	#a0
 	{
@@ -35,15 +47,15 @@
 	}
 	#a1
 	{
-		font-size: 30px;
+		font-size: 29px;
 		color: black;
 	}
 	#a2
 	{
-		font-size: 30px;
+		font-size: 29px;
 		color: black;
 	}
-	
+
 }
 
 @media screen and (max-width: 992px) /*Эти стили будут применены для экранов с шириной 992px либо меньше */
@@ -54,7 +66,7 @@
 	}
 	section
 	{
-		font-size: 80%;
+		font-size: 90%;
 	}
 	
 }
