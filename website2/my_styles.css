@@ -6,7 +6,7 @@ body
 	font-weight: 300; 
 	min-width: 960px; /*Свойство - устанавливает минимальную ширину элемента*/
 	background-color: #d6d6d6;
-	margin: 0 25px;
+	margin: 0 25px;	
 }
 .wrapper
 {

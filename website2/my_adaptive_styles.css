@@ -3,8 +3,8 @@
 	.infoAboutServiceCenter
 	{
 		float: left;
-		width: 1078px; /*(забирает на 2px больше) => будет 1080px*/
-
+		width: auto; /*(забирает на 2px больше) => будет 1080px*/
+		
 	}
 	.grid
 	{
@@ -17,8 +17,13 @@
 {
 	section
 	{
-		/*margin-right: 25px;*/
-		width: 1080px;
+		width: auto;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+	body
+	{
+		margin: 0 0px;	
 	}
 	.wrapper
 	{
@@ -34,7 +39,7 @@
 	}
 	.header
 	{
-		margin-bottom: 50px;
+		margin-bottom: 50px; /*Отступ в названии сайта чтобы не накладывалось на меню*/
 	}
 	.text_2
 	{
