@@ -14,8 +14,31 @@ body
 }
 .header
 {
-	text-align: center;
+	width: auto;
+	text-align: left;
 	height: 50px;
+}
+.header
+{
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	width: auto;
+	height: auto;
+	text-align: center;
+} 
+#nameSite_h1
+{
+	
+	font-size: 40px;
+	font-weight: 900;	
+}
+#sidebar
+{
+	display: inline-block;
+	
+	padding-right: 20px;
+	font-size: 20px;
 }
 .header h1 
 {
@@ -27,9 +50,10 @@ body
 {
 	/*text-align: center; Делает пункты меню по центру. Это сработало так как мы сделали элементы li инлайн-блоками, если бы использовали float: ... то text-align: center; не сработал бы*/ 
 	list-style: none; /*Чтобы небыло кружочков от тега ul*/
-	border-top: 2px solid #ccc;
+	/*border-top: 2px solid #ccc;
 	border-bottom: 2px solid #ccc;
-	border-left: 2px solid #ccc;
+	border-left: 2px solid #ccc;*/
+								/*border: 1px solid black;*/
 	
 	/*position: relative;*/
 }
@@ -61,20 +85,13 @@ body
 	/*height: 2px;*/ /*Задаем высоту линии*/	
 	/*background-color: green;*/
 /*}*/
-#sidebar
-{
-	float: right;
-	padding-right: 20px;
-	border-left: 2px solid #ccc;
-	border-right: 2px solid #ccc;
-}
 
 .slider_item
 {
 	background-repeat: no-repeat;
 	height: 435px; /*Высоту должны задать именно здесь, у каждого слайда, т.к. они имеют нулевую высоту и мы их не увидим если зададим в другом месте*/
 	/*padding-top: 60%;*/
-	
+	border: 1px solid black;
 }
 .page_row
 {
@@ -218,7 +235,7 @@ p
 .main_p /*Названия блоков*/
 {
 	font-size: 35px;
-	font-weight: 900;
+		
 }
 
 
@@ -284,9 +301,40 @@ p
 	font-size: 20px;
 }
 
-
-
-
+.mobile_menu
+{
+	border: 0;
+	background: none;
+	padding: 5px;
+	cursor: pointer; /*При наведении будет указатель в виде пальца*/
+	border-radius: 10px;
+}
+.mobile_menu:hover
+{
+	background-color: #c2c0c0;
+}
+.mobile_menu_item
+{
+	display: block; /*Чтобы нормально задавать ширину и высоту*/
+	width: 20px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: black;
+	/*padding: 0.3px;*/
+	margin-bottom: 3px;
+	
+}
+.mobile_menu_item:last-child
+{
+	margin-bottom: 0px;
+	
+}
+.nav_mobile_menu
+{
+	text-align: right;
+	margin: 10px 0px;
+	display: none; /*Эта кнопка для меню будет скрыта, и доступна только с мобильных устройств*/
+}
 
 
 

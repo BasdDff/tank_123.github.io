@@ -5,14 +5,32 @@
 		float: left;
 		width: auto; /*(забирает на 2px больше) => будет 1080px*/
 		height: auto;
-	}
+	} 
 	.grid
 	{
 		display: inline-block;
 	}
-	
+  
 }
-
+@media screen and (max-width: 1272px)
+{
+	.header
+	{
+		text-align: left;
+	}
+	#nameSite_h1
+	{
+    
+	}
+	#sidebar
+	{
+		font-size: 30px; 
+	}
+	li
+	{
+		font-size: 25px;
+	}
+}
 @media screen and (max-width: 1085px) /*Эти стили будут применены для экранов с шириной 1085px либо меньше */
 {
 	section
@@ -23,27 +41,20 @@
 	}
 	body
 	{
-		margin: 0 0px;	
+		margin: 0 0px;  
 	}
 	.wrapper
 	{
 		text-align: center;
 	}
-	#sidebar
-	{
-		font-size: 30px; 
-	}
-	li
-	{
-		font-size: 30px;
-	}
 	.header
 	{
-		margin-bottom: 50px; /*Отступ в названии сайта чтобы не накладывалось на меню*/
+		margin-left: 25px;
+		margin-right: 25px;
 	}
 	.text_2
 	{
-		height: 325px;
+		height: 3250px;
 	}
 	.infoAboutServiceCenter
 	{
@@ -63,7 +74,34 @@
 		font-size: 29px;
 		color: black;
 	}
-	
+  
+	.nav_mobile_menu
+	{
+		display: block;
+	}
+	ul
+	{
+		display: none; /*По умолчанию меню скрыто*/
+	}  
+	.text_1
+	{
+		display: block;
+	}
+	.text_2
+	{
+		display: block;
+	}
+	.navi-main-open 
+	{
+		display: inline-block; 
+    
+	}
+	.navi ul li
+	{
+		display: block; 
+		text-align: left;
+		margin-right: 1000px;
+	}
 }
 
 @media screen and (max-width: 992px) /*Эти стили будут применены для экранов с шириной 992px либо меньше */
@@ -76,5 +114,29 @@
 	{
 		font-size: 90%;
 	}
-	
+  
 }
+
+/*@media screen and (max-width: 768px)
+{
+	  .nav_mobile_menu
+	  {
+		display: block;
+	  }
+	  ul
+	  {
+		display: none; По умолчанию меню скрыто
+	  }  
+	  .navi-main-open 
+	  {
+		display: inline-block; 
+		 
+	  }
+	  .navi ul li
+	  {
+		display: block; 
+		text-align: left;
+		margin-right: 1000px;
+	  }
+  
+}*/

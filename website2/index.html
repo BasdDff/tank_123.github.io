@@ -7,29 +7,36 @@
 		<title>my WebSite</title>
 		<link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.css">
 		<link href="my_styles.css" rel="stylesheet" type="text/css">
-		<!--В этом файле будем опмизировать (my_adaptive_styles.css) -->
+		<!--В этом файле будем оптимизировать (my_adaptive_styles.css) -->
 		<link href="my_adaptive_styles.css" rel="stylesheet">
 		<script type="text/javascript" src="jquery-3.5.1.min.js"> </script>
 		<script src="lib/owlcarousel/owl.carousel.min.js"> </script>
 		<script type="text/javascript" src="script.js"> </script>
 		
 	</head>
-	<body>
+	<body> 
 		<div class="wrapper">  
 			<header class="header">
-				<h1> Центр компьютерного сервисного обслуживания </h1>
-			</header>
-			<nav class="navi"> 
-				<div >
+				<span id="nameSite_h1"> Центр компьютерного сервисного обслуживания
 				<aside id="sidebar">
 					<div> Контактная &ensp;+38(095)461-17-92</div> <!--&ensp; = пробел --> 
 					<div> Информация +38(050)542-74-81</div> 
-				</aside> 
-				<ul>
-					<li> <a href="#"> Услуги </a> </li>
-					<li> <a href="#"> Цены </a> </li>
-					<li> <a href="#"> Часто задаваемые вопросы </a> </li>
-					<li> <a href="#"> О компании </a> </li>
+				</aside> </span>  
+			</header>
+			<nav class="navi"> 
+				<div class="nav_mobile_menu"> <!--data-атрибуты , можем указывать их любым элементам и работать с ними-->
+					<button data-target="#navi-main" type="button" class="mobile_menu"> 
+						<span class="mobile_menu_item"> </span>
+						<span class="mobile_menu_item"> </span>
+						<span class="mobile_menu_item"> </span>
+					</button>
+				</div>
+				
+				<ul id="navi-main" id="dag">
+					<li id="navi-main2"> <a href="#"> Услуги </a> </li>
+					<li id="navi-main2"> <a href="#"> Цены </a> </li>
+					<li id="navi-main2"> <a href="#"> Часто задаваемые вопросы </a> </li>
+					<li id="navi-main2"> <a href="#"> О компании </a> </li>
 					<li> </li>
 				</ul>
 			</nav>
