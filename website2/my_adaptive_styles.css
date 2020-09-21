@@ -17,7 +17,7 @@
 	section
 	{
 		margin-right: 25px;
-		text-align: center;
+		width: 1070px;
 	}
 	.wrapper
 	{
@@ -57,7 +57,7 @@
 		font-size: 29px;
 		color: black;
 	}
-
+	
 }
 
 @media screen and (max-width: 992px) /*Эти стили будут применены для экранов с шириной 992px либо меньше */
