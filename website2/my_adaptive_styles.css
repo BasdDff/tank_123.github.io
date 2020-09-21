@@ -4,7 +4,7 @@
 	{
 		float: left;
 		width: auto; /*(забирает на 2px больше) => будет 1080px*/
-		
+		height: auto;
 	}
 	.grid
 	{
