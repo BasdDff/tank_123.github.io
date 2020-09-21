@@ -3,7 +3,8 @@
 	.infoAboutServiceCenter
 	{
 		float: left;
-		width: 1000px;
+		width: 1078px; /*(забирает на 2px больше) => будет 1080px*/
+
 	}
 	.grid
 	{
@@ -16,8 +17,8 @@
 {
 	section
 	{
-		margin-right: 25px;
-		width: 1070px;
+		/*margin-right: 25px;*/
+		width: 1080px;
 	}
 	.wrapper
 	{
