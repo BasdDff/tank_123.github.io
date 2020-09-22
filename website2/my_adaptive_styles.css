@@ -16,11 +16,11 @@
 {
 	.header
 	{
-		text-align: left;
+		text-align: left; /* свойство text-align работает только с блочными элементами,*/
 	}
 	#nameSite_h1
 	{
-    
+		
 	}
 	#sidebar
 	{
@@ -54,7 +54,7 @@
 	}
 	.text_2
 	{
-		height: 3250px;
+		height: 250px;
 	}
 	.infoAboutServiceCenter
 	{
