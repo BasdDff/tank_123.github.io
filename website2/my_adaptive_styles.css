@@ -77,11 +77,11 @@
   
 	.nav_mobile_menu
 	{
-		display: block;
+		display: block; 
 	}
 	ul
 	{
-		display: none; /*По умолчанию меню скрыто*/
+		display: none; /*По умолчанию меню скрыто*/ 
 	}  
 	.text_1
 	{
@@ -91,16 +91,36 @@
 	{
 		display: block;
 	}
+	#navi-main
+	{
+		/*float: left;*/
+	}
 	.navi-main-open 
 	{
 		display: inline-block; 
-    
+		/*position: absolute;*/
+		background-color: #c2c0c0;
+		margin-left: 25px;
+		float: left;
+		margin-top: 0px;
+		margin-bottom: 10px;
 	}
 	.navi ul li
 	{
-		display: block; 
+		display: block;  /*Или в столбик - display: block; или в строку display: inline-block;*/
 		text-align: left;
-		margin-right: 1000px;
+		
+	}
+	.navi ul li a:hover
+	{
+	color: #000;
+	box-shadow: inset 0 0 0 3px grey;
+	transition: 1.0s transform;
+	transform: scale(1.05); /*При наведении блок будет увеличиваться*/
+	}
+	.image_avat_normal /*Отключаем нормальную картинку*/
+	{
+		display: none;
 	}
 }
 

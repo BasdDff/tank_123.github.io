@@ -11,6 +11,7 @@ body
 .wrapper
 {
 	width: auto;
+	
 }
 .header
 {
@@ -166,7 +167,7 @@ body
 
 #a3
 {
-	margin-top: 5px;
+	margin-top: 10px;
 	display: inline-block;
 	padding: 30px;
 	background-color: #c2c0c0;
@@ -186,7 +187,7 @@ body
 }
 .section_1
 {
-	margin-top: 25px;
+	margin-top: 10px;
 	margin-bottom: 10px;
 }
 .section_2
@@ -307,13 +308,16 @@ p
 	font-size: 20px;
 }
 
-.mobile_menu
+.mobile_menu /*Стили для мобильного меню*/
 {
+	/*float: right;*/  /*Распологает кнопку на одном уровне со слайдером*/
 	border: 0;
 	background: none;
 	padding: 5px;
 	cursor: pointer; /*При наведении будет указатель в виде пальца*/
 	border-radius: 10px;
+	margin-right: 25px;
+	/*margin-left: 25px;*/
 }
 .mobile_menu:hover
 {
@@ -322,13 +326,14 @@ p
 .mobile_menu_item
 {
 	display: block; /*Чтобы нормально задавать ширину и высоту*/
-	width: 20px;
-	height: 2px;
+	/*width: 20px;
+	height: 2px;*/
 	border-radius: 1px;
 	background-color: black;
 	/*padding: 0.3px;*/
 	margin-bottom: 3px;
-	
+	width: 50px;
+	height: 5px;
 }
 .mobile_menu_item:last-child
 {
@@ -338,18 +343,42 @@ p
 .nav_mobile_menu
 {
 	text-align: right;
-	margin: 10px 0px;
+	margin-top: 10px;
 	display: none; /*Эта кнопка для меню будет скрыта, и доступна только с мобильных устройств*/
+	
 }
 
+.image_avat
+{
+	display: inline-block;
+	margin-left: 25px;
+}
+.nav_mobile_menu
+{
+	text-align: justify; /*свойство text-align: justify; выравнивает текст по-ширине,*/
+} /*но кроме последней строки, последняя строка выравнивается по-левому краю*/
+.nav_mobile_menu:after {  /*=> создаем  псевдо-элемент display: inline-block; после всего что есть */
+    content: ''; /*и задаю ему width: 100%; чтобы он гарантированно занимал последнюю строчку, */
+    width: 100%; /*тем самым позволяя всему что выше выравниваться по-ширине*/
+    display: inline-block;
+}
+.image_avat
+{
+    display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: #c2c0c0;
+	text-align: center; /*Чтобы картинка была по центру фона (по оси X)*/
+	border-radius: 50%; /*Делаем фон круглым*/
 
 
-
-
-
-
-
-
+}
+.image_avat_position
+{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 
 
