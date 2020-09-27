@@ -83,16 +83,23 @@ body
 	transition: 1.0s transform;
 	transform: scale(1.1); /*При наведении блок будет увеличиваться*/
 }
-/*.sliding-line  Скользящая линия (при наводке)*/
-/*{
-	position: absolute; *//*Чтобы наша линия позиционировалась не относительно всей страницы, а в пределах меню, 
-	нужно написать position: relative; для тега <ul>(который является родителем) */
-	/*left: 0;*//*Задаем ей начальное местоположение*/
-	/*bottom: -2px; *//*Так как нижнее подчеркивание составляет 2px, и чтобы скользящая линия находилась на одном уровне нужно написать -2px;*/
-	/*height: 2px;*/ /*Задаем высоту линии*/	
-	/*background-color: green;*/
-/*}*/
 
+.page_row
+{
+	margin-bottom: 0px;
+}
+#c1
+{
+	background-image: url(images/231312321132.jpg); background-size: 640px 435px;
+}
+#c2
+{
+	background-image: url(images/321321312312132.jpg); background-size: 640px 435px;
+}
+#c3
+{
+	background-image: url(images/123123321312.jpg); background-size: 640px 435px;
+}
 .slider_item
 {
 	background-repeat: no-repeat;
@@ -103,9 +110,6 @@ body
 .page_row
 {
 	width: 640px;
-}
-.page_row
-{
 	display: inline-block; /*Нужно, чтобы наш слайдер занимал пространство только под свой контент, и не больше
 	до этого выделялось все оранжевым*/
 }
@@ -141,7 +145,6 @@ body
 	left: 0;
 	right: 0;
 }
-
 .infoAboutServiceCenter
 {
 	float: right;
@@ -205,7 +208,7 @@ body
 }
 .one-section
 {
-	display: inline-block; /*Или можно сделать так , так будет при увеличении нормально будет*/ 
+	display: inline-block; /*Элементы секции будут идти в ряд*/ 
 	width: 500px;
     /*height: 900px;*/
 	margin: 15px;
@@ -379,7 +382,6 @@ p
     top: 50%;
     transform: translateY(-50%);
 }
-
 
 
 

@@ -6,7 +6,7 @@ $(document).ready(function(){
 		autoplayTimeout: 5000 //Время за которое будут обновляться слайды
 	});
   
-	jQuery('.mobile_menu').on('click', function(){
+	jQuery('.mobile_menu').on('click', function(){ //Для мобильного меню
 		var target1 = jQuery(this).data('target'); //вызываем метод data со значением data-атрибута target в тег <button> передали атрибут data-target
 		jQuery(target1).toggleClass("navi-main-open"); //Метод toggleClass - добавляет или убирает класс navi-main-open, когда мы будем
 	}); //кликать по меню, и дальше в CSS описываем класс navi-main-open, чтобы когда он появлялся открывалось меню

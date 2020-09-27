@@ -2,25 +2,50 @@
 {
 	.infoAboutServiceCenter
 	{
-		float: left;
-		width: auto; /*(забирает на 2px больше) => будет 1080px*/
+		float: left;	
+		width: auto;
 		height: auto;
+		margin-top: 5px;
+		margin-bottom: 10px;
+		padding: 10px;
 	} 
 	.grid
 	{
-		display: inline-block;
+		/*display: inline-block;
+		width: 100%; *//*Если указать 100, то будет немного выступать справа */
 	}
-  
+	.slider_item	
+	{
+		height: 647px;
+		width: 90%;
+	}
+	#c1
+	{
+		background-size: 100% 100%;
+		background-image: url(images/231312321132.jpg); background-size: 100% 100%;
+	}
+	#c2
+	{
+		background-size: 100% 100%;
+		background-image: url(images/321321312312132.jpg); background-size: 100% 100%;
+	}
+	#c3
+	{
+		background-size: 100% 100%;
+		background-image: url(images/123123321312.jpg); background-size: 100% 100%;
+	}
+	.page_row
+	{
+		width: 100%;
+	}
+	
+
 }
 @media screen and (max-width: 1272px)
 {
 	.header
 	{
 		text-align: left; /* свойство text-align работает только с блочными элементами,*/
-	}
-	#nameSite_h1
-	{
-		
 	}
 	#sidebar
 	{
@@ -51,7 +76,12 @@
 	{
 		margin-left: 25px;
 		margin-right: 25px;
+		/*margin-bottom: 50px;*/
 	}
+	/*.nav_mobile_menu
+	{
+		margin-bottom: 50px;
+	}*/
 	.text_2
 	{
 		height: 250px;
@@ -79,7 +109,7 @@
 	{
 		display: block; 
 	}
-	ul
+	ul  
 	{
 		display: none; /*По умолчанию меню скрыто*/ 
 	}  
@@ -120,11 +150,11 @@
 	}
 	.image_avat_normal /*Отключаем нормальную картинку*/
 	{
-		display: none;
+		display: none;	
 	}
 }
 
-@media screen and (max-width: 992px) /*Эти стили будут применены для экранов с шириной 992px либо меньше */
+/*@media screen and (max-width: 992px) Эти стили будут применены для экранов с шириной 992px либо меньше 
 {
 	body
 	{
@@ -135,7 +165,7 @@
 		font-size: 90%;
 	}
   
-}
+}*/
 
 /*@media screen and (max-width: 768px)
 {
