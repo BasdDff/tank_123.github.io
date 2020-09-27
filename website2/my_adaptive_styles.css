@@ -11,35 +11,9 @@
 	} 
 	.grid
 	{
-		/*display: inline-block;
-		width: 100%; *//*Если указать 100, то будет немного выступать справа */
+		display: inline-block;
+		width: 100%;/*Если указать 100, то будет немного выступать справа */
 	}
-	.slider_item	
-	{
-		height: 647px;
-		width: 90%;
-	}
-	#c1
-	{
-		background-size: 100% 100%;
-		background-image: url(images/231312321132.jpg); background-size: 100% 100%;
-	}
-	#c2
-	{
-		background-size: 100% 100%;
-		background-image: url(images/321321312312132.jpg); background-size: 100% 100%;
-	}
-	#c3
-	{
-		background-size: 100% 100%;
-		background-image: url(images/123123321312.jpg); background-size: 100% 100%;
-	}
-	.page_row
-	{
-		width: 100%;
-	}
-	
-
 }
 @media screen and (max-width: 1272px)
 {
@@ -139,7 +113,6 @@
 	{
 		display: block;  /*Или в столбик - display: block; или в строку display: inline-block;*/
 		text-align: left;
-		
 	}
 	.navi ul li a:hover
 	{
@@ -151,6 +124,31 @@
 	.image_avat_normal /*Отключаем нормальную картинку*/
 	{
 		display: none;	
+	}
+	
+	.slider_item	
+	{
+		height: 647px;
+		width: 100%;
+	}
+	#c1
+	{
+		background-size: 100% 100%;
+		background-image: url(images/231312321132.jpg); background-size: 100% 100%;
+	}
+	#c2
+	{
+		background-size: 100% 100%;
+		background-image: url(images/321321312312132.jpg); background-size: 100% 100%;
+	}
+	#c3
+	{
+		background-size: 100% 100%;
+		background-image: url(images/123123321312.jpg); background-size: 100% 100%;
+	}
+	.page_row
+	{
+		width: 100%;
 	}
 }
 
