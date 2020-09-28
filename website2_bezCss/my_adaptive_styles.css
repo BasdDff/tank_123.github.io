@@ -1,0 +1,190 @@
+@media screen and (max-width: 1912px) /*Эти стили будут применены для экранов с шириной 1912px либо меньше */
+{
+	.infoAboutServiceCenter
+	{
+		float: left;	
+		width: auto;
+		height: auto;
+		margin-top: 5px;
+		margin-bottom: 10px;
+		padding: 10px;
+	} 
+	.grid
+	{
+		display: inline-block;
+		width: 100%;/*Если указать 100, то будет немного выступать справа */
+	}
+}
+@media screen and (max-width: 1272px)
+{
+	.header
+	{
+		text-align: left; /* свойство text-align работает только с блочными элементами,*/
+	}
+	#sidebar
+	{
+		font-size: 30px; 
+	}
+	li
+	{
+		font-size: 25px;
+	}
+}
+@media screen and (max-width: 1085px) /*Эти стили будут применены для экранов с шириной 1085px либо меньше */
+{
+	section
+	{
+		width: auto;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+	body
+	{
+		margin: 0 0px;  
+	}
+	.wrapper
+	{
+		text-align: center;
+	}
+	.header
+	{
+		margin-left: 25px;
+		margin-right: 25px;
+		/*margin-bottom: 50px;*/
+	}
+	/*.nav_mobile_menu
+	{
+		margin-bottom: 50px;
+	}*/
+	.text_2
+	{
+		height: 250px;
+	}
+	.infoAboutServiceCenter
+	{
+		font-size: 19px;
+	}
+	#a0
+	{
+		font-size: 40px;
+	}
+	#a1
+	{
+		font-size: 29px;
+		color: black;
+	}
+	#a2
+	{
+		font-size: 29px;
+		color: black;
+	}
+  
+	.nav_mobile_menu
+	{
+		display: block; 
+	}
+	ul  
+	{
+		display: none; /*По умолчанию меню скрыто*/ 
+	}  
+	.text_1
+	{
+		display: block;
+	}
+	.text_2
+	{
+		display: block;
+	}
+	#navi-main
+	{
+		/*float: left;*/
+	}
+	.navi-main-open 
+	{
+		display: inline-block; 
+		/*position: absolute;*/
+		background-color: #c2c0c0;
+		margin-left: 25px;
+		float: left;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	.navi ul li
+	{
+		display: block;  /*Или в столбик - display: block; или в строку display: inline-block;*/
+		text-align: left;
+	}
+	.navi ul li a:hover
+	{
+	color: #000;
+	box-shadow: inset 0 0 0 3px grey;
+	transition: 1.0s transform;
+	transform: scale(1.05); /*При наведении блок будет увеличиваться*/
+	}
+	.image_avat_normal /*Отключаем нормальную картинку*/
+	{
+		display: none;	
+	}
+	
+	.slider_item	
+	{
+		height: 647px;
+		width: 100%;
+	}
+	#c1
+	{
+		background-size: 100% 100%;
+		background-image: url(images/231312321132.jpg); background-size: 100% 100%;
+	}
+	#c2
+	{
+		background-size: 100% 100%;
+		background-image: url(images/321321312312132.jpg); background-size: 100% 100%;
+	}
+	#c3
+	{
+		background-size: 100% 100%;
+		background-image: url(images/123123321312.jpg); background-size: 100% 100%;
+	}
+	.page_row
+	{
+		width: 100%;
+	}
+}
+
+/*@media screen and (max-width: 992px) Эти стили будут применены для экранов с шириной 992px либо меньше 
+{
+	body
+	{
+		font-size: 90%;
+	}
+	section
+	{
+		font-size: 90%;
+	}
+  
+}*/
+
+/*@media screen and (max-width: 768px)
+{
+	  .nav_mobile_menu
+	  {
+		display: block;
+	  }
+	  ul
+	  {
+		display: none; По умолчанию меню скрыто
+	  }  
+	  .navi-main-open 
+	  {
+		display: inline-block; 
+		 
+	  }
+	  .navi ul li
+	  {
+		display: block; 
+		text-align: left;
+		margin-right: 1000px;
+	  }
+  
+}*/
