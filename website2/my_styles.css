@@ -248,9 +248,7 @@ p
 		
 }
 
-
-
-/*О нас */
+/*Наши преимущества*/
 #our_advantages
 {
 	border: 1px solid black;
@@ -347,10 +345,8 @@ p
 {
 	text-align: right;
 	margin-top: 10px;
-	display: none; /*Эта кнопка для меню будет скрыта, и доступна только с мобильных устройств*/
-	
+	display: none; /*Эта кнопка(также аватарка и поиск уже добавил сюда) для меню будет скрыта, и доступна только с мобильных устройств*/
 }
-
 .image_avat
 {
 	display: inline-block;
@@ -373,8 +369,6 @@ p
 	background-color: #c2c0c0;
 	text-align: center; /*Чтобы картинка была по центру фона (по оси X)*/
 	border-radius: 50%; /*Делаем фон круглым*/
-
-
 }
 .image_avat_position
 {
@@ -382,6 +376,100 @@ p
     top: 50%;
     transform: translateY(-50%);
 }
+.search_position
+{
+	display: inline-block;
+}
+
+
+/*Стили для таблиц с ценами*/
+.h5
+{
+	text-align: center;
+	font-size: 30px;
+}	
+.tables
+{
+	text-align: center;
+	border: 1px solid black;
+	padding: 10px;
+}
+.section_1_tables
+{
+	display: inline-block;
+	background-color: #c2c0c0;
+}
+/*.section_2_tables
+{
+	display: inline-block;
+	background-color: #c2c0c0;
+}*/
+.table_1
+{
+	width: 300px;
+	height: 200px;
+}
+.table_2
+{
+	width: 300px;
+	height: 200px;
+}
+.table_3
+{
+	width: 300px;
+	height: 200px;
+}
+.table_4
+{
+	width: 300px;
+	height: 200px;
+}
+.table_5
+{
+	width: 300px;
+	height: 200px;
+}
+.table_6
+{
+	width: 300px;
+	height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

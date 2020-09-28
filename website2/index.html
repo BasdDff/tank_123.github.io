@@ -27,6 +27,10 @@
 					<div class="image_avat">
 						<img class="image_avat_position"src="images/avat.svg">
 					</div>
+					<form class="search_position">
+							<input type="search">
+							<input type="submit" value="Найти">	
+					</form>
 					<button data-target="#navi-main" type="button" class="mobile_menu"> 
 						<span class="mobile_menu_item"> </span>
 						<span class="mobile_menu_item"> </span>
@@ -39,7 +43,12 @@
 					<li> <a href="#"> Цены </a> </li>
 					<li> <a href="#"> Часто задаваемые вопросы </a> </li>
 					<li> <a href="#"> О компании </a> </li>
-					<li> </li>
+					<li> <a href="#"> Закажите обратный звонок </a> </li> 
+					<li> 
+				<form class="search_normal">
+					<input type="search">
+					<input type="submit" value="Найти">	
+				</form> </li>
 				</ul>
 			</nav>
 		</div>
@@ -182,5 +191,184 @@
 				</div>	
 			</div>
 		</section>
+		
+		<section class="tables">
+			<h1 class="h5"> Цены </h1>
+			<div>
+				<table border="1" class="table_1 section_1_tables">
+					<tr> 
+						<th> Ремонт телефонов </th>
+						<th> Цены </th>
+					</tr>
+					<tr> 
+						<td> Замена стекла </td>
+						<td> 250 грн. </td>
+					</tr>
+					<tr> 
+						<td> Восстановление после залития </td>
+						<td> 500 грн. </td>
+					</tr>
+					<tr> 
+						<td> Прошивка </td>
+						<td> 200 грн. </td>
+					</tr>
+				</table>
+				<table border="1" class="table_2 section_1_tables">
+					<tr> 
+						<th> Ремонт ноутбуков </th>
+						<th> Цены </th>
+					</tr>
+					<tr> 
+						<td> Замена экранов на ноутбуках </td>
+						<td> 1000 грн. </td>
+					</tr>
+					<tr> 
+						<td> Восстановление после попадания жидкости </td>
+						<td> 2000 грн. </td>
+					</tr>
+					<tr> 
+						<td> Чистка ноутбуков от пыли </td>
+						<td> 300 грн. </td>
+					</tr>
+				</table>
+				<table border="1" class="table_3 section_1_tables">
+					<tr> 
+						<th> Ремонт компьютеров </th>
+						<th> Цены </th>
+					</tr>
+					<tr> 
+						<td> Диагностика компьютеров </td>
+						<td> 300 грн. </td>
+					</tr>
+					<tr> 
+						<td> Модернизация компьютеров </td>
+						<td> 200 грн. </td>
+					</tr>
+					<tr> 
+						<td> Чистка компьютеров от пыли </td>
+						<td> 300 грн. </td>
+					</tr>
+				</table>
+			
+				<table border="1" class="table_4 section_1_tables">
+					<tr> 
+						<th> Установка и настройка ПО </th>
+						<th> Цены </th>
+					</tr>
+					<tr> 
+						<td> Установка и настройка любых версий Windows </td>
+						<td> 300 грн. </td>
+					</tr>
+					<tr> 
+						<td> Установка и настройка нужных программ </td>
+						<td> 200 грн. </td>
+					</tr>
+					<tr> 
+						<td> Установка и настройка антивирусов </td>
+						<td> 100 грн. </td>
+					</tr>
+					<tr> 
+						<td> Установка драйверов </td>
+						<td> 200 грн. </td>
+					</tr>
+				</table>
+				
+				<table border="1" class="table_5 section_1_tables">
+					<tr> 
+						<th> Улучшение работы вашего компьютера или ноутбука </th>
+						<th> Цены </th>
+					</tr>
+					<tr>
+						<td> Чистка от ненужной информации и временных файлов </td>
+						<td> 200 грн. </td>
+					</tr>
+				</table>
+				
+				<table border="1" class="table_6 section_1_tables">
+					<tr> 
+						<th> Сборка новых и Б/У компьютеров </th>
+						<th> Цены </th>
+					</tr>
+					<tr> 
+						<td> Сборка Компьютеров под заказ </td>
+						<td> 500 грн. </td>
+					</tr>
+					<tr> 
+						<td> Установка и замена комплектующих </td>
+						<td> 200 грн. </td>
+					</tr>
+				</table>
+			</div>
+		</section>		
+		
+		<form>
+			<fieldset>
+				<!-- Тег <legend> применяется для создания заголовка группы элементов формы, которая определяется с помощью тега <fieldset>. -->
+				<legend> Ваша информация </legend>
+				<label for="field_1">
+					<span> Имя <span class="required"> * </span></span>
+					<input type="text" required placeholder="Name" id="field_1">
+				</label> <br>
+				<label for="field_2">
+					<span> Фамилия <span class="required"> * </span></span>
+					<input type="text" required placeholder="Surname" id="field_2">
+				</label> <br>
+				<label for="field_3">
+					<span> Почта <span class="required"> * </span></span>
+					<input type="email" required placeholder="email@gmail.com" id="field_3"> <!-- type="email" для адресов электронной почты-->
+				</label> <br>
+				<label for="field_4">
+					<span> Телефон <span class="required"> * </span></span>
+					<input type="tel" required placeholder="0951234567" id="field_4">
+				</label> <br>
+				<label for="field_5">
+					<span> Где вы живете(Район) <span>
+					<select id="field_5"> 
+						<option value="Индустриальный район"> Индустриальный район </option><!--Тег <option> определяет отдельные пункты списка, создаваемого с помощью контейнера <select>-->
+						<option value="Киевский район"> Киевский район </option>	
+						<option value="Московский район"> Московский район </option>
+						<option value="Немышлянский район"> Немышлянский район </option>
+						<option value="Новобаварский район"> Новобаварский район </option>
+						<option value="Основянский район"> Основянский район </option>
+						<option value="Слободской район"> Слободской район </option>
+						<option value="Холодногорский район"> Холодногорский район </option>
+						<option value="Шевченковский район"> Шевченковский район </option>
+					</select>
+				</label> <br>
+			</fieldset>		
+			<fieldset>		
+				<legend> Опишите свою проблему </legend>	
+				<label for="field_6">
+					<span> Здесь <span class="required"> * </span></span>
+					<textarea id="field_6"> </textarea>
+				</label> <br>
+				<label><input type="submit" value="Submit"></label>
+			</fieldset>
+		</form>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</body>
 </html>
