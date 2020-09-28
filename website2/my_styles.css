@@ -435,6 +435,16 @@ p
 	height: 200px;
 }
 
+.section_form
+{
+	margin-top: 10px;
+	padding: 10px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
 
 
 
