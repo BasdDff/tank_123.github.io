@@ -3,11 +3,11 @@
 	.infoAboutServiceCenter
 	{
 		float: left;	
-		width: auto;
+		/*width: auto;*/
 		height: auto;
 		margin-top: 5px;
-		margin-bottom: 10px;
 		padding: 10px;
+		max-width: 2000px;
 	} 
 	.grid
 	{
@@ -46,16 +46,6 @@
 	{
 		text-align: center;
 	}
-	.header
-	{
-		margin-left: 25px;
-		margin-right: 25px;
-		/*margin-bottom: 50px;*/
-	}
-	/*.nav_mobile_menu
-	{
-		margin-bottom: 50px;
-	}*/
 	.text_2
 	{
 		height: 250px;
@@ -78,7 +68,12 @@
 		font-size: 29px;
 		color: black;
 	}
-  
+ 
+	.line_top_bottom_menu
+	{
+		border-top: 0px solid black;	
+		border-bottom: 0px solid black;
+	}
 	.nav_mobile_menu
 	{
 		display: block; 
@@ -95,14 +90,9 @@
 	{
 		display: block;
 	}
-	#navi-main
-	{
-		/*float: left;*/
-	}
 	.navi-main-open 
 	{
 		display: inline-block; 
-		/*position: absolute;*/
 		background-color: #c2c0c0;
 		margin-left: 25px;
 		float: left;
@@ -116,10 +106,14 @@
 	}
 	.navi ul li a:hover
 	{
-	color: #000;
-	box-shadow: inset 0 0 0 3px grey;
-	transition: 1.0s transform;
-	transform: scale(1.05); /*При наведении блок будет увеличиваться*/
+		color: #000;
+		box-shadow: inset 0 0 0 3px grey;
+		transition: 1.0s transform;
+		transform: scale(1.05); /*При наведении блок будет увеличиваться*/
+	}
+	.navi ul li a:active 
+	{
+		font-weight: 900;
 	}
 	.image_avat_normal /*Отключаем нормальную картинку*/
 	{
@@ -129,8 +123,6 @@
 	{
 		display: none;
 	}
-	
-	
 	.slider_item	
 	{
 		height: 647px;
@@ -155,41 +147,8 @@
 	{
 		width: 100%;
 	}
-}
-
-/*@media screen and (max-width: 992px) Эти стили будут применены для экранов с шириной 992px либо меньше 
-{
-	body
+	.infoAboutServiceCenterWithSliders
 	{
-		font-size: 90%;
-	}
-	section
-	{
-		font-size: 90%;
-	}
-  
-}*/
-
-/*@media screen and (max-width: 768px)
-{
-	  .nav_mobile_menu
-	  {
 		display: block;
-	  }
-	  ul
-	  {
-		display: none; По умолчанию меню скрыто
-	  }  
-	  .navi-main-open 
-	  {
-		display: inline-block; 
-		 
-	  }
-	  .navi ul li
-	  {
-		display: block; 
-		text-align: left;
-		margin-right: 1000px;
-	  }
-  
-}*/
+	}
+}
