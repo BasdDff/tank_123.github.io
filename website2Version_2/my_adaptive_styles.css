@@ -1,0 +1,139 @@
+@media screen and (max-width: 1912px) /*Эти стили будут применены для экранов с шириной 1912px либо меньше */
+{
+	.infoAboutServiceCenter
+	{
+		/*float: left;	*/
+		/*width: auto;*/
+		/*height: auto;*/
+		/*margin-top: 5px;*/
+		/*max-width: 2000px;*/
+	} 
+	.grid
+	{
+		display: inline-block;
+		/*width: 100%;*//*Если указать 100, то будет немного выступать справа */
+	}
+}
+@media screen and (max-width: 1272px)
+{
+	.header
+	{
+		text-align: left; /* свойство text-align работает только с блочными элементами,*/
+	}
+	#sidebar
+	{
+		font-size: 30px; 
+	}
+	li
+	{
+		font-size: 25px;
+	}
+}
+@media screen and (max-width: 1085px) /*Эти стили будут применены для экранов с шириной 1085px либо меньше */
+{
+	section
+	{
+		/*width: auto;*/
+		/*margin-left: 20px;
+		margin-right: 20px;*/
+	}
+	body
+	{
+		font-size: 50%;
+		/*margin: 0 0px;  */
+	}
+	.wrapper
+	{
+		text-align: center;
+	}
+	.text_2
+	{
+		height: 250px;
+	}
+	.infoAboutServiceCenter
+	{
+		font-size: 19px;
+		/*margin-top: 5px;*/
+		/*margin: 0 25px;*/
+	}
+	#a0
+	{
+		font-size: 40px;
+	}
+	#a1
+	{
+		font-size: 29px;
+		color: black;
+	}
+	#a2
+	{
+		font-size: 29px;
+		color: black;
+	}
+ 
+	.line_top_bottom_menu
+	{
+		border-top: 0px solid black;	
+		border-bottom: 0px solid black;
+	}
+	.nav_mobile_menu
+	{
+		display: block; 
+	}
+	ul  
+	{
+		display: none; /*По умолчанию меню скрыто*/ 
+	}  
+	.text_1
+	{
+		display: block;
+	}
+	.text_2
+	{
+		display: block;
+	}
+	.navi-main-open 
+	{
+		display: inline-block; 
+		background-color: #c2c0c0;
+		margin-left: 25px;
+		float: left;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	.navi ul li
+	{
+		display: block;  /*Или в столбик - display: block; или в строку display: inline-block;*/
+		text-align: left;
+	}
+	.navi ul li a:hover
+	{
+		color: #000;
+		/*box-shadow: inset 0 0 0 3px grey;*/
+		transition: 1.0s transform;
+		transform: scale(1.03); /*При наведении блок будет увеличиваться*/
+	}
+	.navi ul li a:active 
+	{
+		font-weight: 900;
+	}
+	.image_avat_normal /*Отключаем нормальную картинку*/
+	{
+		display: none;	
+	}
+	.search_normal
+	{
+		display: none;
+	}
+	
+	
+	.page_row
+	{
+		width: 100%;
+		margin-bottom: 0px;
+	}
+	.infoAboutServiceCenterWithSliders
+	{
+		display: block;
+	}
+}
