@@ -108,10 +108,12 @@
 	}
 	.navi ul li a:hover
 	{
-		color: #000;
+		color: blue;
+		/*background-color: #c2c0c0;*/
 		/*box-shadow: inset 0 0 0 3px grey;*/
-		transition: 1.0s transform;
-		transform: scale(1.03); /*При наведении блок будет увеличиваться*/
+		transition: 0.05s transform;
+		transform: scale(1.02); /*При наведении блок будет увеличиваться*/
+		text-decoration: underline;
 	}
 	.navi ul li a:active 
 	{
@@ -135,5 +137,9 @@
 	.infoAboutServiceCenterWithSliders
 	{
 		display: block;
+	}
+	.slider_item
+	{
+		padding-top: 53.3%;
 	}
 }
