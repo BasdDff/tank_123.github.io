@@ -17,7 +17,7 @@ section
 }
 .sw
 {
-	max-width: 1700px;
+	max-width: 1800px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -305,13 +305,14 @@ section
 	-webkit-transform: translateX(-7px);
 	transform: translateX(-7px);
 }
-.grid
+.grid /*																	*/
 {
 	/*display: flex;
 	flex-direction: row;
 	justify-content: center;*/ /*Можно сделать так*/
 	text-align: center;
-	/*border: 1px solid black; */
+	
+	border: 1px solid black; 
 	/*position: relative;*/		
 }
 .section_1
@@ -335,9 +336,9 @@ section
 .one-section
 {
 	display: inline-block; /*Элементы секции будут идти в ряд*/ 
-	width: 544px;
+	width: 500px;
     /*height: 900px;*/
-	
+	margin: 15px;
 	background-color: #c2c0c0;
 }
 .one-section:not(:last-child)
@@ -346,11 +347,11 @@ section
 }
 .text_1
 {
-	height: 250px; /*Увеличивает блоки с текстом*/
+	height: 260px; /*Увеличивает блоки с текстом*/
 }
 .text_2
 {
-	height: 250px; /*Увеличивает блоки с текстом*/
+	height: 260px; /*Увеличивает блоки с текстом*/
 }
 .one-section:hover
 {

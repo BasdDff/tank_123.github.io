@@ -1,17 +1,19 @@
-@media screen and (max-width: 1912px) /*Эти стили будут применены для экранов с шириной 1912px либо меньше */
+@media screen and (max-width: 1583px) 
 {
-	.infoAboutServiceCenter
+	#with_1912px
 	{
-		/*float: left;	*/
-		/*width: auto;*/
-		/*height: auto;*/
-		/*margin-top: 5px;*/
-		/*max-width: 2000px;*/
-	} 
+		text-align: center;
+	}
 	.grid
 	{
 		display: inline-block;
-		/*width: 100%;*//*Если указать 100, то будет немного выступать справа */
+		text-align: center;
+		
+		
+	}
+	.one-section
+	{
+		margin-right: 5px;
 	}
 }
 @media screen and (max-width: 1272px)
@@ -142,4 +144,14 @@
 	{
 		padding-top: 53.3%;
 	}
+	
+	
+}
+@media screen and (max-width: 992px) 
+{
+	html {
+		font-size: 100%;
+	}
+	
+	
 }
