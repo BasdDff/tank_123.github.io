@@ -199,7 +199,7 @@ section
 }
 .slider_item
 {
-	background-image: url(images/slide.jpg);
+	background-image: url(images/slide_1.jpg);
 	padding-top: 33.3%;	/*Высота слайдера, автоматически резинится(высота автоматически резинится под ширину)*/
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -209,7 +209,17 @@ section
 }
 .slider_itemm
 {
-	background-image: url(images/slide.jpg);
+	background-image: url(images/slide_2.jpg);
+	padding-top: 33.3%;	/*Это вместо ширины и высоты*/
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	border: 1px solid black;
+}
+.slider_itemmm
+{
+	background-image: url(images/slide_3.png);
 	padding-top: 33.3%;	/*Это вместо ширины и высоты*/
 	background-position: center center;
 	background-repeat: no-repeat;
