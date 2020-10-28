@@ -17,7 +17,7 @@ section
 }
 .sw
 {
-	max-width: 1800px;
+	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -336,7 +336,7 @@ section
 .one-section
 {
 	display: inline-block; /*Элементы секции будут идти в ряд*/ 
-	width: 500px;
+	width: 350px;
     /*height: 900px;*/
 	margin: 15px;
 	background-color: #c2c0c0;
@@ -351,7 +351,7 @@ section
 }
 .text_2
 {
-	height: 260px; /*Увеличивает блоки с текстом*/
+	height: 300px; /*Увеличивает блоки с текстом*/
 }
 .one-section:hover
 {
@@ -367,7 +367,7 @@ p
 }
 .li
 {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: left;
 	/*padding: 0px 17px;*/
 	list-style-type: none;
@@ -380,7 +380,7 @@ p
 }
 .main_p /*Названия блоков*/
 {
-	font-size: 35px;
+	font-size: 30px;
 	text-align: center;
 	list-style: none;
 }
