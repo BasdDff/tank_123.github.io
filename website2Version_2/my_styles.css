@@ -1,15 +1,15 @@
 	/*Обработка сразу всей страницы(body) и шапки страницы(все что в теге wrapper, контакт.инфа + меню)*/
 body  
 {
-	font: 16px/1.2 'Times New Roman'; /*Свойство - позволяет одновременно задать несколько характеристик шрифта и текста.
+	/*font: 16px/1.2 'Times New Roman';*/ /*Свойство - позволяет одновременно задать несколько характеристик шрифта и текста.
 	Первое значение размер/межстрочное расстояние шрифта, второе шрифт*/
-	color: black;
-	font-weight: 300; 
+	/*color: black;*/
+	/*font-weight: 300; */
 	min-width: 960px; /*Свойство - устанавливает минимальную ширину элемента*/
-	background-color: #d6d6d6;
+	background-color: #d6d6d6; 
 	/*margin: 0 25px;*/
 	margin: 0;
-	padding: 0;
+	padding: 0;	
 }
 section
 {
@@ -84,15 +84,32 @@ section
 	padding: 8px 12px; /*Сверху снизу по 8 пикселей, справа слева по 12*/
 	text-decoration: none; /*Чтобы ссылки не подчеркивались*/
 	text-transform: uppercase; /*Свойство - делает все буквы верхним регистром*/
+	position: relative;
+}
+.navi ul li a::before 
+{
+	content: ''; /*Если не задать content, то псевдо-элемент не появится*/
+	bottom: 0;
+	right: 0; /*Указываем что этот элемент будет находиться снизу справа*/
+	position: absolute;
+	width: 0%; /*Займет 100% ширины ссылки*/
+	height: 1px;
+	background-color: black;
+	transition: 0.2s;
+}
+.navi ul li a:hover:before
+{
+	width: 100%;
+	left: 0;
 }
 .navi ul li a:hover
 {
-	color: blue;
-	background-color: #c2c0c0;
+	/*color: blue;*/
+	background-color: #C0BEC0;
 	/*box-shadow: inset 0 0 0 3px grey;*/
-	transition: 0.05s transform;
+	transition: 0.05s;
 	transform: scale(1.02); /*При наведении блок будет увеличиваться*/
-	text-decoration: underline;
+	text-decoration: none;
 }
 .navi ul li a:active 
 {
@@ -112,7 +129,7 @@ section
 {
 	display: inline-block;
 	border-top: 1px solid black;	
-	border-bottom: 1px solid black;			
+	/*border-bottom: 1px solid black;	*/		
 }
 /*Стили для мобильного меню*/
 .mobile_menu 
@@ -121,7 +138,8 @@ section
 	border: 0;
 	background: none;
 	padding: 5px;
-	cursor: pointer; /*При наведении будет указатель в виде пальца*/
+	cursor: pointer;
+	/*cursor: url(images/cursor_PNG88.png), auto;*/ /*При наведении будет указатель в виде пальца*/
 	border-radius: 10px;
 	margin-right: 25px;
 	/*margin-left: 25px;*/
@@ -301,7 +319,7 @@ section
 	font-size: 40px;
 	border: 1px solid black; 
 }*/
-#a3:hover
+/*#a3:hover
 {
 	transition: 1.0s transform;
 	box-shadow:
@@ -314,7 +332,7 @@ section
     7px 7px #c2c0c0;
 	-webkit-transform: translateX(-7px);
 	transform: translateX(-7px);
-}
+}*/
 .grid /*																	*/
 {
 	/*display: flex;
@@ -358,10 +376,16 @@ section
 .text_1
 {
 	height: 260px; /*Увеличивает блоки с текстом*/
+	padding: 0; 
+	margin-left: 10px;
+	margin-right: 10px;
 }
 .text_2
 {
 	height: 300px; /*Увеличивает блоки с текстом*/
+	padding: 0; 
+	margin-left: 10px;
+	margin-right: 10px;
 }
 .one-section:hover
 {
@@ -381,6 +405,23 @@ p
 	text-align: left;
 	/*padding: 0px 17px;*/
 	list-style-type: none;
+	/*list-style-image: url(images/icon_stars.svg);*/
+	position: relative;
+}
+.li::before
+{
+	/*content: url(images/icon_stars.svg);*/ /*Если не задать content, то псевдо-элемент не появится*/
+	content: '';
+	background-image: url(images/icon_stars.svg);
+	background-size: contain;  
+	width: 25px;
+	height: 25px;  
+	display: inline-block;
+	padding: 0;
+	margin: 0;	
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 .grid_icon
 {
@@ -390,6 +431,7 @@ p
 }
 .main_p /*Названия блоков*/
 {
+	margin: 0;
 	font-size: 30px;
 	text-align: center;
 	list-style: none;
@@ -470,6 +512,7 @@ p
 	text-align: center;
 	border: 1px solid black;
 	padding: 10px;
+	cursor: cell;
 }
 .section_1_tables
 {
@@ -521,6 +564,7 @@ p
 	border-bottom: 1px solid black;
 	border-left: 1px solid black;
 	border-right: 1px solid black;
+	cursor: help;
 }
 	/*C*/
 .test
