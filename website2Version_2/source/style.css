@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*Переменная - задает цвет для элементов (темно-серый)*/
+.header {
+  background-color: #c2c0c0;
+}
+
+.navi ul li a:hover {
+  background-color: #c2c0c0;
+}
+
+.mobile_menu:hover {
+  background-color: #c2c0c0;
+}
+
+.image_avat {
+  background-color: #c2c0c0;
+}
+
+.infoAboutServiceCenter {
+  background-color: #c2c0c0;
+}
+
+.one-section {
+  background-color: #c2c0c0;
+}
+
+.icon_item {
+  background-color: #c2c0c0;
+}
+
+.section_1_tables {
+  background-color: #c2c0c0;
+}
+
+.test {
+  background-color: #c2c0c0;
+}
