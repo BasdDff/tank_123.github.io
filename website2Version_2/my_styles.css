@@ -310,37 +310,14 @@ section
 }
 
 	/*Обработка Мы ремонтируем(все что в теге with_1912px)*/
-/*#a3
-{
-	margin-top: 10px;
-	display: inline-block;
-	padding: 30px;
-	background-color: #c2c0c0;
-	font-size: 40px;
-	border: 1px solid black; 
-}*/
-/*#a3:hover
-{
-	transition: 1.0s transform;
-	box-shadow:
-    1px 1px #c2c0c0,
-    2px 2px #c2c0c0,
-    3px 3px #c2c0c0,
-    4px 4px #c2c0c0,
-    5px 5px #c2c0c0,
-    6px 6px #c2c0c0,
-    7px 7px #c2c0c0;
-	-webkit-transform: translateX(-7px);
-	transform: translateX(-7px);
-}*/
 .grid /*																	*/
 {
 	/*display: flex;
 	flex-direction: row;
 	justify-content: center;*/ /*Можно сделать так*/
-	text-align: center;
+											text-align: center;
 	
-	border: 1px solid black; 
+											/*border: 1px solid black; */
 	/*position: relative;*/		
 }
 .section_1
@@ -364,9 +341,9 @@ section
 .one-section
 {
 	display: inline-block; /*Элементы секции будут идти в ряд*/ 
-	width: 350px;
+	width: 377px;
     /*height: 900px;*/
-	margin: 15px;
+															/*margin: 15px;*/
 	/*background-color: #c2c0c0;*/
 }
 .one-section:not(:last-child)

@@ -33,18 +33,23 @@
 	
 	.one-section
 	{
-		width: 310px;
+		width: 339px;
+	}
+	.grid_repair_item
+	{
+		width: 339px;
+		height: 170px;
 	}
 	.text_1
 	{
 		padding: 0; 
-		margin-left: 30px;
+		/*margin-left: 30px;*/
 		height: 160px;
 	}
 	.text_2
 	{
 		padding: 0; 
-		margin-left: 30px;
+		/*margin-left: 30px;*/
 		height: 160px;
 	}
 	.main_p
@@ -56,11 +61,6 @@
 	{
 		font-size: 16px;
 	}
-	.grid_repair_item
-	{
-		width: 310px;
-		height: 170px;
-	}
 }
 @media screen and (max-width: 1085px) /*Эти стили будут применены для экранов с шириной 1085px либо меньше */
 {
@@ -69,11 +69,6 @@
 		/*width: auto;*/
 		/*margin-left: 20px;
 		margin-right: 20px;*/
-	}
-	body
-	{
-		font-size: 50%;
-		/*margin: 0 0px;  */
 	}
 	.wrapper
 	{
@@ -186,32 +181,24 @@
 	
 	.one-section
 	{
-		width: 270px;
+		width: 297px;
 		font-size: 10px;
+	}
+	.grid_repair_item
+	{
+		width: 297px;
+		height: 140px;
 	}
 	.text_1
 	{
 		padding: 0; 
-		margin-left: 30px;
+		/*margin-left: 30px;*/
 		height: 200px;
 	}
 	.text_2
 	{
 		padding: 0; 
-		margin-left: 30px;
+		/*margin-left: 30px;*/
 		height: 200px;
 	}
-	.grid_repair_item
-	{
-		width: 270px;
-		height: 140px;
-	}
-}
-@media screen and (max-width: 992px) 
-{
-	html {
-		font-size: 100%;
-	}
-	
-	
 }
