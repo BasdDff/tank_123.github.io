@@ -1,1 +1,205 @@
 
+@media screen and (max-width: 1583px) 
+{
+	#with_1912px
+	{
+		text-align: center;
+	}
+	.grid
+	{
+		/*display: inline-block;*/
+		text-align: center;
+		
+		
+	}
+	/*.one-section
+	{
+		margin-right: 5px;
+	}*/
+}
+@media screen and (max-width: 1272px)
+{
+	.header
+	{
+		text-align: left; /* свойство text-align работает только с блочными элементами,*/
+	}
+	#sidebar
+	{
+		font-size: 30px; 
+	}
+	li
+	{
+		font-size: 25px;
+	}
+	
+	.one-section
+	{
+		width: 339px;
+	}
+	.grid_repair_item
+	{
+		width: 339px;
+		height: 170px;
+	}
+	.text_1
+	{
+		padding: 0; 
+		/*margin-left: 30px;*/
+		height: 160px;
+	}
+	.text_2
+	{
+		padding: 0; 
+		/*margin-left: 30px;*/
+		height: 160px;
+	}
+	.main_p
+	{
+		font-size: 20px;
+		margin: 0;
+	}
+	.li
+	{
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 1085px) /*Эти стили будут применены для экранов с шириной 1085px либо меньше */
+{
+	section
+	{
+		/*width: auto;*/
+		/*margin-left: 20px;
+		margin-right: 20px;*/
+	}
+	.wrapper
+	{
+		text-align: center;
+	}
+	.text_2
+	{
+		height: 250px;
+	}
+	.infoAboutServiceCenter
+	{
+		font-size: 19px;
+		/*margin-top: 5px;*/
+		/*margin: 0 25px;*/
+	}
+	#a0
+	{
+		font-size: 40px;
+	}
+	#a1
+	{
+		font-size: 29px;
+		color: black;
+	}
+	#a2
+	{
+		font-size: 29px;
+		color: black;
+	}
+ 
+	.line_top_bottom_menu
+	{
+		border-top: 0px solid black;	
+		border-bottom: 0px solid black;
+	}
+	.nav_mobile_menu
+	{
+		display: block; 
+	}
+	ul  
+	{
+		display: none; /*По умолчанию меню скрыто*/ 
+	}  
+	.text_1
+	{
+		display: block;
+	}
+	.text_2
+	{
+		display: block;
+	}
+	.navi-main-open 
+	{
+		display: inline-block; 
+		background-color: #c2c0c0;
+		margin-left: 25px;
+		float: left;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	.navi ul li
+	{
+		display: block;  /*Или в столбик - display: block; или в строку display: inline-block;*/
+		text-align: left;
+	}
+	.navi ul li a:hover
+	{
+		color: blue;
+		/*background-color: #c2c0c0;*/
+		/*box-shadow: inset 0 0 0 3px grey;*/
+		transition: 0.05s transform;
+		transform: scale(1.02); /*При наведении блок будет увеличиваться*/
+		text-decoration: underline;
+	}
+	.navi ul li a:active 
+	{
+		font-weight: 900;
+	}
+	.image_avat_normal /*Отключаем нормальную картинку*/
+	{
+		display: none;	
+	}
+	.search_normal
+	{
+		display: none;
+	}
+	
+	
+	.page_row
+	{
+		width: 100%;
+		margin-bottom: 0px;
+	}
+	.infoAboutServiceCenterWithSliders
+	{
+		display: block;
+	}
+	.slider_item
+	{
+		padding-top: 53.3%;
+	}
+	.slider_itemm
+	{
+		padding-top: 53.3%;
+	}
+	.slider_itemmm
+	{
+		padding-top: 53.3%;
+	}
+	
+	.one-section
+	{
+		width: 297px;
+		font-size: 10px;
+	}
+	.grid_repair_item
+	{
+		width: 297px;
+		height: 140px;
+	}
+	.text_1
+	{
+		padding: 0; 
+		/*margin-left: 30px;*/
+		height: 200px;
+	}
+	.text_2
+	{
+		padding: 0; 
+		/*margin-left: 30px;*/
+		height: 200px;
+	}
+}
