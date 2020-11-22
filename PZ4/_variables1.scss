@@ -1,0 +1,10 @@
+$fbmargin: 30px;
+$maxwd: 1200px;
+@mixin cols($cl){
+	color: $cl;
+}
+$colors: (
+	generalBG: #141513,
+	textcolor: white,
+	SecondColorTopic: orange
+);
