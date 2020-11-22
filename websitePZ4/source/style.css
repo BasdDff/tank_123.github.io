@@ -222,7 +222,7 @@ section {
   margin-bottom: 10px;
 }
 .infoAboutServiceCenterWithSliders .page_row .slider .slider_item {
-  background-image: url(C:/Users/persw/Desktop/website2Version_2/images/slide_1.jpg);
+  background-image: url(images/slide_1.jpg);
   padding-top: 33.7%;
   /*Высота слайдера, автоматически резинится(высота автоматически резинится под ширину)*/
   background-position: center center;
@@ -231,7 +231,7 @@ section {
   border: 1px solid black;
 }
 .infoAboutServiceCenterWithSliders .page_row .slider .slider_itemm {
-  background-image: url(C:/Users/persw/Desktop/website2Version_2/images/slide_2.jpg);
+  background-image: url(images/slide_2.jpg);
   padding-top: 33.7%;
   /*Это вместо ширины и высоты*/
   background-position: center center;
