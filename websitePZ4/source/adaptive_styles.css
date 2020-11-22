@@ -1,9 +1,6 @@
 @charset "UTF-8";
 /*$color: #c2c0c0;*/
 /*Переменная - задает цвет для элементов (темно-серый)*/
-/*.navi ul li a:hover {
-	background-color: $color;
-}*/
 .icon_item {
   background-color: #c2c0c0;
 }
@@ -17,6 +14,7 @@
 }
 
 /*mixin - это функция*/
+/*dwqdwqdwqqdw*/
 /*Подключили файл с mixin и переменными*/
 @media screen and (max-width: 1583px) {
   .content_1200px #with_1912px {

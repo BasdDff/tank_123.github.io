@@ -2,9 +2,6 @@
 /*Обработка сразу всей страницы(body) и шапки страницы(все что в теге wrapper, контакт.инфа + меню)*/
 /*$color: #c2c0c0;*/
 /*Переменная - задает цвет для элементов (темно-серый)*/
-/*.navi ul li a:hover {
-	background-color: $color;
-}*/
 .icon_item {
   background-color: #c2c0c0;
 }
@@ -18,7 +15,12 @@
 }
 
 /*mixin - это функция*/
+/*dwqdwqdwqqdw*/
 /*Подключили файл с mixin и переменными*/
+.content_1200px .tables, .content_1200px #our_advantages, .infoAboutServiceCenterWithSliders .page_row .slider .slider_itemmm, .infoAboutServiceCenterWithSliders .page_row .slider .slider_itemm, .infoAboutServiceCenterWithSliders .page_row .slider .slider_item {
+  border: 1px solid black;
+}
+
 body {
   /*font: 16px/1.2 'Times New Roman';*/
   /*Свойство - позволяет одновременно задать несколько характеристик шрифта и текста.
@@ -222,31 +224,28 @@ section {
   margin-bottom: 10px;
 }
 .infoAboutServiceCenterWithSliders .page_row .slider .slider_item {
-  background-image: url(images/slide_1.jpg);
+  /*background-image: url(images/slide_1.jpg);*/
   padding-top: 33.7%;
   /*Высота слайдера, автоматически резинится(высота автоматически резинится под ширину)*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid black;
 }
 .infoAboutServiceCenterWithSliders .page_row .slider .slider_itemm {
-  background-image: url(images/slide_2.jpg);
+  /*background-image: url();*/
   padding-top: 33.7%;
   /*Это вместо ширины и высоты*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid black;
 }
 .infoAboutServiceCenterWithSliders .page_row .slider .slider_itemmm {
-  background-image: url(C:/Users/persw/Desktop/website2Version_2/images/slide_3.png);
+  /*background-image: url(C:/Users/persw/Desktop/website2Version_2/images/slide_3.png);*/
   padding-top: 33.7%;
   /*Это вместо ширины и высоты*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid black;
 }
 .infoAboutServiceCenterWithSliders .page_row .slider .owl-dot span {
   background-color: #fff;
@@ -293,7 +292,7 @@ section {
   /* свойство для прокрутки по горизонтали. Автоматом, если содержимое больше блока */
   height: 435px;
   background-color: #c2c0c0;
-  /*border: 1px solid black; */
+  /*@extend %bordersBlocks;*/
 }
 .content_1200px section .infoAboutServiceCenter #a0 {
   font-size: 30px;
@@ -308,7 +307,7 @@ section {
 }
 .content_1200px #with_1912px .grid {
   text-align: center;
-  /*border: 1px solid black; */
+  /*@extend %bordersBlocks; */
 }
 .content_1200px #with_1912px .grid .one-section {
   display: inline-block;
@@ -415,7 +414,6 @@ section {
   margin-bottom: 10px;
 }
 .content_1200px #our_advantages {
-  border: 1px solid black;
   margin-bottom: 10px;
 }
 .content_1200px #our_advantages .h3 {
@@ -475,7 +473,6 @@ section {
 }
 .content_1200px .tables {
   text-align: center;
-  border: 1px solid black;
   padding: 10px;
   cursor: cell;
 }

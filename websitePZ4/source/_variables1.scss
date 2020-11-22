@@ -1,17 +1,9 @@
 /*$color: #c2c0c0;*/ /*Переменная - задает цвет для элементов (темно-серый)*/
-
 $colors: ( /*map - похоже на объект*/
 	generalBackground: #d6d6d6,
 	secondBackground: #c2c0c0
 );
 	
-/*.navi ul li a:hover {
-	background-color: $color;
-}*/
-
-
-
-
 .icon_item {
 	background-color: map-get($colors, secondBackground);
 }
@@ -22,7 +14,7 @@ $colors: ( /*map - похоже на объект*/
 	background-color: map-get($colors, secondBackground);
 }
 
-/*mixin - это функция*/
+/*mixin - это функция*/ /*dwqdwqdwqqdw*/
 @mixin href($color_href, $color_hover) { 
 	color: $color_href;
 	display: block; /*Делаем ссылки блочными элементами*/
@@ -66,14 +58,3 @@ $colors: ( /*map - похоже на объект*/
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-

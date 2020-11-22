@@ -1,28 +1,6 @@
 @charset "UTF-8";
+/*$color: #c2c0c0;*/
 /*Переменная - задает цвет для элементов (темно-серый)*/
-.header {
-  background-color: #c2c0c0;
-}
-
-/*.navi ul li a:hover {
-	background-color: $color;
-}*/
-.mobile_menu:hover {
-  background-color: #c2c0c0;
-}
-
-.image_avat {
-  background-color: #c2c0c0;
-}
-
-.infoAboutServiceCenter {
-  background-color: #c2c0c0;
-}
-
-.one-section {
-  background-color: #c2c0c0;
-}
-
 .icon_item {
   background-color: #c2c0c0;
 }
@@ -36,3 +14,4 @@
 }
 
 /*mixin - это функция*/
+/*dwqdwqdwqqdw*/
