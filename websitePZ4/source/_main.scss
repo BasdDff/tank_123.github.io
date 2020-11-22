@@ -1,0 +1,544 @@
+	/*Обработка сразу всей страницы(body) и шапки страницы(все что в теге wrapper, контакт.инфа + меню)*/
+@import '_variables1'; /*Подключили файл с mixin и переменными*/
+	
+body  
+{
+	/*font: 16px/1.2 'Times New Roman';*/ /*Свойство - позволяет одновременно задать несколько характеристик шрифта и текста.
+	Первое значение размер/межстрочное расстояние шрифта, второе шрифт*/
+	/*min-width: 960px; *//*Свойство - устанавливает минимальную ширину элемента*/
+	background-color: map-get($colors, generalBackground); 
+	margin: 0;
+	padding: 0;	
+}
+section
+{
+	margin: 0 25px;
+}
+
+.wrapper
+{
+	margin: 0;
+	padding: 0;
+	.header
+	{
+		width: auto;	
+		text-align: left;
+		height: 50px;
+		width: auto;
+		height: auto;
+		text-align: center;
+		background-color: map-get($colors, secondBackground);
+		.content_1200px
+		{
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			#nameSite_h1
+			{
+				font-size: 30px;	
+				font-weight: 900;	
+			}
+			#nameSite
+			{
+				display: block;
+				float: left; /*В следующем пропишем clear: both;*/
+			}
+			#sidebar
+			{
+				/*clear: both;
+				display: inline-block;*/
+				
+				/*padding-right: 20px;*/
+				font-size: 20px;
+				.flex_right
+				{
+					display: flex;
+					justify-content: flex-end;
+				}
+			}
+		}
+	}
+	section
+	{
+		.navi 
+		{
+			.nav_mobile_menu
+			{
+				text-align: right;
+				margin-top: 10px;
+				display: none; /*Эта кнопка(также аватарка и поиск уже добавил сюда) для меню будет скрыта, и доступна только с мобильных устройств*/
+				text-align: justify; /*свойство text-align: justify; выравнивает текст по-ширине,*/
+				/*но кроме последней строки, последняя строка выравнивается по-левому краю*/
+				.image_avat
+				{
+					display: inline-block;
+					margin-left: 25px;
+					display: inline-block;
+					width: 100px;
+					height: 100px;
+					background-color: map-get($colors, secondBackground);
+					text-align: center; /*Чтобы картинка была по центру фона (по оси X)*/
+					border-radius: 50%; /*Делаем фон круглым*/
+					.image_avat_position
+					{
+						position: relative;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+				.search_position
+				{
+					display: inline-block;
+				}
+				.mobile_menu 
+				{
+					/*float: right;*/  /*Распологает кнопку на одном уровне со слайдером*/
+					border: 0;
+					background: none;
+					padding: 5px;
+					cursor: pointer;
+					/*cursor: url(images/cursor_PNG88.png), auto;*/ /*При наведении будет указатель в виде пальца*/
+					border-radius: 10px;
+					margin-right: 25px;
+					/*margin-left: 25px;*/
+					.mobile_menu_item
+					{
+						display: block; /*Чтобы нормально задавать ширину и высоту*/
+						/*width: 20px;
+						height: 2px;*/
+						border-radius: 1px;
+						background-color: black;
+						/*padding: 0.3px;*/
+						margin-bottom: 3px;
+						width: 50px;
+						height: 5px;
+					}
+					.mobile_menu_item:last-child
+					{
+						margin-bottom: 0px;
+					}
+				}
+				.mobile_menu:hover {
+					background-color: map-get($colors, secondBackground);
+				}
+			}
+			.nav_mobile_menu:after /*=> создаем  псевдо-элемент display: inline-block; после всего что есть */
+			{  
+				content: ''; /*и задаю ему width: 100%; чтобы он гарантированно занимал последнюю строчку, */
+				width: 100%; /*тем самым позволяя всему что выше выравниваться по-ширине*/
+				display: inline-block;
+			}
+			#navi-main
+			{
+				padding-left: 0px;
+				.line_top_bottom_menu
+				{
+					display: inline-block;
+					border-top: 1px solid black;	
+					/*border-bottom: 1px solid black;	*/	
+					li
+					{
+						.img_href_menu
+						{
+							display: inline;
+							weight: 20px;
+							height: 20px;
+						}
+						
+					}
+					ul
+					{
+						display: none;	
+					}
+				}
+			}
+			ul
+			{
+				text-align: center; /*Делает пункты меню по центру.*/
+				list-style: none; /*Чтобы небыло кружочков от тега ul*/
+				li
+				{
+					display: inline-block; 
+					a
+					{
+						@include href(black, #c2c0c0);
+					}
+					
+				}
+			}
+		}
+	}
+}
+.infoAboutServiceCenterWithSliders
+{
+	margin: 0;
+	padding: 0;
+	.page_row
+	{
+		width: 100%;
+		display: inline-block; /*Нужно, чтобы наш слайдер занимал пространство только под свой контент, и не больше
+		до этого выделялось все оранжевым*/
+		.slider
+		{
+			margin-bottom: 10px;
+			.slider_item 
+			{
+				background-image: url(C:/Users/persw/Desktop/website2Version_2/images/slide_1.jpg);
+				padding-top: 33.7%;
+				/*Высота слайдера, автоматически резинится(высота автоматически резинится под ширину)*/
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				border: 1px solid black;
+			}
+			.slider_itemm 
+			{
+				background-image: url(C:/Users/persw/Desktop/website2Version_2/images/slide_2.jpg);
+				padding-top: 33.7%;
+				/*Это вместо ширины и высоты*/
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				border: 1px solid black;
+			}
+			.slider_itemmm 
+			{
+				background-image: url(C:/Users/persw/Desktop/website2Version_2/images/slide_3.png);
+				padding-top: 33.7%;
+				/*Это вместо ширины и высоты*/
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				border: 1px solid black;
+			}
+		}
+		.slider .owl-dot span 
+		{
+			background-color: #fff;
+			border: 1px solid #ccc;
+			width: 16px; /*1rem = 16px*/
+			height: 16px;
+			display: block; /*Так как <span> это inline элемент, а чтобы ширина и высота сработали, нужно сделать его блочным элементом*/
+		}
+		.slider .owl-dot.active span  /*У элемента <span> должно быть сразу одновременно два класса .owl-dot.active, поэтому пишем слитно*/
+		{
+			background-color: black;
+		}
+		.slider .owl-dot:hover span
+		{
+			border-color: black;
+		}
+		.slider .owl-dot 
+		{
+			display: inline-block;
+			margin: 0 8px;
+		}
+		.slider .owl-dots
+		{
+			text-align: center;
+			/*С помощью позиционирования можем разместить кнопки, так как наш слайдер имеет свойство position: relative;
+			=> кнопкам можем задать position: absolute;*/
+			position: absolute;
+			bottom: 0; /*Говорим, чтобы блок растянулся по нижней, левой, правой границах(прижался вплотную к ним)*/
+			left: 0;
+			right: 0;
+		}
+	}
+}
+.content_1200px
+{
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	section
+	{
+		.infoAboutServiceCenter
+		{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			/*float: right;*/
+			/*max-width: 1200px;*/
+			overflow: auto; /* свойство для прокрутки по горизонтали. Автоматом, если содержимое больше блока */
+			height: 435px;
+			background-color: map-get($colors, secondBackground);
+			/*border: 1px solid black; */
+			#a0
+			{
+				font-size: 30px;
+			}
+			#a1
+			{
+				font-size: 20px;
+				color: black;
+			}
+			#a2
+			{
+				font-size: 20px;
+				color: black;
+			}
+		}
+	}
+	#with_1912px
+	{
+		.grid 
+		{
+			text-align: center;
+			/*border: 1px solid black; */
+			.one-section
+			{
+				display: inline-block; /*Элементы секции будут идти в ряд*/ 
+				width: 377px;
+				background-color: map-get($colors, secondBackground);
+				.text_1
+				{
+					height: 260px; /*Увеличивает блоки с текстом*/
+					padding: 0; 
+					margin-left: 10px;
+					margin-right: 10px;
+					.main_p /*Названия блоков*/
+					{
+						margin: 0;
+						font-size: 30px;
+						text-align: center;
+						list-style: none;
+					}
+					.li
+					{
+						font-size: 20px;
+						text-align: left;
+						/*padding: 0px 17px;*/
+						list-style-type: none;
+						/*list-style-image: url(images/icon_stars.svg);*/
+						position: relative;
+					}
+					.li::before
+					{
+						/*content: url(images/icon_stars.svg);*/ /*Если не задать content, то псевдо-элемент не появится*/
+						content: '';
+						background-image: url(C:/Users/persw/Desktop/website2Version_2/images/icon_stars.svg); /*background-image: url(../img/icon/mark_yes.svg); если */
+						background-size: contain;  /*css файл в отдельном файле*/
+						width: 25px;
+						height: 25px;  
+						display: inline-block;
+						padding: 0;
+						margin: 0;	
+						vertical-align: middle;
+						margin-left: 10px;
+						margin-right: 10px;
+					}
+				}
+				
+				.text_2
+				{
+					height: 300px; /*Увеличивает блоки с текстом*/
+					padding: 0; 
+					margin-left: 10px;
+					margin-right: 10px;
+					.main_p /*Названия блоков*/
+					{
+						margin: 0;
+						font-size: 30px;
+						text-align: center;
+						list-style: none;
+					}
+					.li
+					{
+						font-size: 20px;
+						text-align: left;
+						/*padding: 0px 17px;*/
+						list-style-type: none;
+						/*list-style-image: url(images/icon_stars.svg);*/
+						position: relative;
+					}
+					.li::before
+					{
+						/*content: url(images/icon_stars.svg);*/ /*Если не задать content, то псевдо-элемент не появится*/
+						content: '';
+						background-image: url(C:/Users/persw/Desktop/website2Version_2/images/icon_stars.svg); /*background-image: url(../img/icon/mark_yes.svg); если */
+						background-size: contain;  /*css файл в отдельном файле*/
+						width: 25px;
+						height: 25px;  
+						display: inline-block;
+						padding: 0;
+						margin: 0;	
+						vertical-align: middle;
+						margin-left: 10px;
+						margin-right: 10px;
+					}
+				}
+				.grid_repair_item
+				{
+					opacity: 1.0;
+					text-align: center;
+				}
+				.grid_repair_item:hover
+				{
+					opacity: 0.7;
+				}
+			}
+			.one-section:not(:last-child)
+			{
+				margin-right: 5px;
+			}
+			.one-section:hover
+			{
+					background: rgba(0, 0, 0, 0.3);
+					color: white;
+					transition: 1.0s;
+			}	
+		}
+		.section_1
+		{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.section_2
+		{
+			margin-bottom: 10px;
+		}
+	}
+	#our_advantages
+	{
+		border: 1px solid black;
+		margin-bottom: 10px;
+		.h3
+		{
+			text-align: center;	
+			font-size: 30px;
+			font-weight: 900;
+			letter-spacing: 5px; /*Интервалы между буквами*/	
+		}	
+		.icons
+		{
+			display: -webkit-box; /*Для кроссбраузерности здесь стоит добавить префиксные свойства*/
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row; /*flex элементы должны идти в ряд*/
+			.icon
+			{
+				width: 33.333%; /*Ширина каждого элемента*/
+				border-right: 1px solid black;
+				border-top: 1px solid black;
+				text-align: center;
+				padding: 5px;
+				.icon_item
+				{
+					display: inline-block; /* div(block - элементы) делаем inline элементами*/
+					width: 100px;
+					height: 100px;
+					/*background-color: #c2c0c0;*/
+					text-align: center; /*Чтобы картинка была по центру фона (по оси X)*/
+					border-radius: 50%; /*Делаем фон круглым*/
+					.icon_item_image
+					{
+						/*max-width: 100%;*/
+						position: relative;
+						top: 50%;
+						transform: translateY(-50%); /*По оси Y картинка будет по центру*/
+					}
+				}
+				.about_icon_info
+				{
+					font-size: 25px;
+					margin-top: 3px; 
+					margin-bottom: 3px;
+				}
+				.info_h5
+				{
+					font-size: 20px;
+					padding: 3px;
+					word-wrap: break-word; /*Перенос строк автоматически, чтобы слово поместилось в заданную ширину блока*/
+					line-height: 1.5;
+				}
+			}
+			.icon:nth-of-type(3)  /*в (можно 3n), или можно написать :last-child, или сделать доп.класс(или айди) и написать туда*/ 
+			{
+				border-right: 0px solid black; /*Отменить рамку справа где она двойная(останется одна, из #our_advantages)*/
+			}
+		}
+	}
+	.tables
+	{
+		text-align: center;
+		border: 1px solid black;
+		padding: 10px;
+		cursor: cell;
+		.h5
+		{
+			text-align: center;
+			font-size: 30px;
+		}
+		div
+		{
+			.section_1_tables
+			{
+				display: inline-block;
+				/*background-color: #c2c0c0;*/
+			}
+			.table_1
+			{
+				width: 300px;
+				height: 200px;
+			}
+			.table_2
+			{
+				width: 300px;
+				height: 200px;
+			}
+			.table_3
+			{
+				width: 300px;
+				height: 200px;
+			}
+			.table_4
+			{
+				width: 300px;
+				height: 200px;
+			}
+			.table_5
+			{
+				width: 300px;
+				height: 200px;
+			}
+			.table_6
+			{
+				width: 300px;
+				height: 200px;
+			}	
+		}
+	}
+	.section_form
+	{
+		margin-top: 10px;
+		padding: 10px;
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+		border-left: 1px solid black;
+		border-right: 1px solid black;
+		cursor: help;
+	}
+}
+.footer
+{
+	margin: 0;
+	margin-top: 10px;
+	/*background-color: #c2c0c0;*/
+	padding: 10px;
+	height: 45px;
+	.content_1200px
+	{
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		.social_networks_item
+		{
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+}
+
+
