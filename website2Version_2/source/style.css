@@ -1,37 +1,645 @@
 @charset "UTF-8";
+/*$color: #c2c0c0;*/
 /*Переменная - задает цвет для элементов (темно-серый)*/
-.header {
-  background-color: #c2c0c0;
+/*mixin - это функция*/
+/*Подключили файл с mixin и переменными*/
+main .tab_section .tabs ul li a, main .sortable_list .sort .sortable li, main .wrapper_accordion .accordion .accordion-item .accordion-item_content, main .wrapper_accordion .accordion .accordion-item .accordion-item_trigger, main .form, .infoAboutServiceCenterWithSliders .page_row .image-slider .image-slider_wrapper .image-slider_slide .image-slider_image .slider_item {
+  border: 1px solid black;
 }
 
-.navi ul li a:hover {
-  background-color: #c2c0c0;
+body {
+  /*font: 16px/1.2 'Times New Roman';*/
+  /*Свойство - позволяет одновременно задать несколько характеристик шрифта и текста.
+  Первое значение размер/межстрочное расстояние шрифта, второе шрифт*/
+  background-color: #d6d6d6;
+  margin: 0;
+  padding: 0;
 }
 
-.mobile_menu:hover {
-  background-color: #c2c0c0;
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.image_avat {
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+.wrapper .header {
+  width: auto;
+  text-align: left;
+  height: 60px;
+  width: auto;
+  text-align: center;
   background-color: #c2c0c0;
 }
-
-.infoAboutServiceCenter {
+.wrapper .header .content_1200px {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper .header .content_1200px .inline-header .image_avat_normal {
+  width: 60px;
+  vertical-align: middle;
+}
+.wrapper .header .content_1200px .inline-header #nameSite_h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+.wrapper .header .content_1200px .inline-header #nameSite {
+  display: block;
+  float: left;
+  /*В следующем пропишем clear: both;*/
+}
+.wrapper .header .content_1200px .inline-header #sidebar {
+  /*clear: both;
+  display: inline-block;*/
+  /*padding-right: 20px;*/
+  font-size: 20px;
+}
+.wrapper .header .content_1200px .inline-header #sidebar .flex_right {
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper section .navi .nav_mobile_menu {
+  text-align: right;
+  margin-top: 10px;
+  display: none;
+  /*Эта кнопка(также аватарка и поиск уже добавил сюда) для меню будет скрыта, и доступна только с мобильных устройств*/
+  text-align: justify;
+  /*свойство text-align: justify; выравнивает текст по-ширине,*/
+  /*но кроме последней строки, последняя строка выравнивается по-левому краю*/
+}
+.wrapper section .navi .nav_mobile_menu .image_avat {
+  display: inline-block;
+  margin-left: 25px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #c2c0c0;
+  text-align: center;
+  /*Чтобы картинка была по центру фона (по оси X)*/
+  border-radius: 50%;
+  /*Делаем фон круглым*/
+}
+.wrapper section .navi .nav_mobile_menu .image_avat .image_avat_position {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wrapper section .navi .nav_mobile_menu .search_position {
+  display: inline-block;
+}
+.wrapper section .navi .nav_mobile_menu .mobile_menu {
+  /*float: right;*/
+  /*Распологает кнопку на одном уровне со слайдером*/
+  border: 0;
+  background: none;
+  padding: 5px;
+  cursor: pointer;
+  /*cursor: url(images/cursor_PNG88.png), auto;*/
+  /*При наведении будет указатель в виде пальца*/
+  border-radius: 10px;
+  margin-right: 25px;
+  /*margin-left: 25px;*/
+}
+.wrapper section .navi .nav_mobile_menu .mobile_menu .mobile_menu_item {
+  display: block;
+  /*Чтобы нормально задавать ширину и высоту*/
+  /*width: 20px;
+  height: 2px;*/
+  border-radius: 1px;
+  background-color: black;
+  /*padding: 0.3px;*/
+  margin-bottom: 3px;
+  width: 50px;
+  height: 5px;
+}
+.wrapper section .navi .nav_mobile_menu .mobile_menu .mobile_menu_item:last-child {
+  margin-bottom: 0px;
+}
+.wrapper section .navi .nav_mobile_menu .mobile_menu:hover {
   background-color: #c2c0c0;
 }
-
-.one-section {
+.wrapper section .navi .nav_mobile_menu:after {
+  content: "";
+  /*и задаю ему width: 100%; чтобы он гарантированно занимал последнюю строчку, */
+  width: 100%;
+  /*тем самым позволяя всему что выше выравниваться по-ширине*/
+  display: inline-block;
+}
+.wrapper section .navi #navi-main {
+  padding-left: 0px;
+}
+.wrapper section .navi #navi-main .line_top_bottom_menu {
+  display: inline-block;
+  border-top: 1px solid black;
+  /*border-bottom: 1px solid black;	*/
+}
+.wrapper section .navi #navi-main .line_top_bottom_menu li .img_href_menu {
+  display: inline;
+  weight: 20px;
+  height: 20px;
+}
+.wrapper section .navi #navi-main .line_top_bottom_menu ul {
+  display: none;
+}
+.wrapper section .navi .content_1200px {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper section .navi ul {
+  text-align: center;
+  /*Делает пункты меню по центру.*/
+  list-style: none;
+  /*Чтобы небыло кружочков от тега ul*/
+}
+.wrapper section .navi ul li {
+  display: inline-block;
+}
+.wrapper section .navi ul li a {
+  color: black;
+  display: block;
+  /*Делаем ссылки блочными элементами*/
+  padding: 8px 12px;
+  /*Сверху снизу по 8 пикселей, справа слева по 12*/
+  text-decoration: none;
+  /*Чтобы ссылки не подчеркивались*/
+  text-transform: uppercase;
+  /*Свойство - делает все буквы верхним регистром*/
+  position: relative;
+}
+.wrapper section .navi ul li a:hover {
   background-color: #c2c0c0;
 }
-
-.icon_item {
-  background-color: #c2c0c0;
+.wrapper section .navi ul li a::before {
+  content: "";
+  /*Если не задать content, то псевдо-элемент не появится*/
+  bottom: 0;
+  right: 0;
+  /*Указываем что этот элемент будет находиться снизу справа*/
+  position: absolute;
+  width: 0%;
+  /*Займет 100% ширины ссылки*/
+  height: 1px;
+  background-color: black;
+  transition: 0.2s;
+}
+.wrapper section .navi ul li a:hover:before {
+  width: 100%;
+  left: 0;
+}
+.wrapper section .navi ul li a:hover {
+  /*color: blue;*/
+  /*background-color: #c2c0c0;*/
+  /*box-shadow: inset 0 0 0 3px grey;*/
+  transition: 0.05s;
+  transform: scale(1.02);
+  /*При наведении блок будет увеличиваться*/
+  text-decoration: none;
+}
+.wrapper section .navi ul li a:active {
+  font-weight: 900;
 }
 
-.section_1_tables {
+.infoAboutServiceCenterWithSliders {
+  margin: 0;
+  padding: 0;
+  /*width: 70%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;*/
+}
+.infoAboutServiceCenterWithSliders .page_row {
+  width: 100%;
+  display: inline-block;
+  /*Нужно, чтобы наш слайдер занимал пространство только под свой контент, и не больше
+  до этого выделялось все оранжевым*/
+}
+.infoAboutServiceCenterWithSliders .page_row .image-slider .image-slider_wrapper {
+  margin-bottom: 5px;
+}
+.infoAboutServiceCenterWithSliders .page_row .image-slider .image-slider_wrapper .image-slider_slide .image-slider_image .slider_item {
+  /*background-image: url(images/slide_1.jpg);*/
+  padding-top: 33.7%;
+  /*Высота слайдера, автоматически резинится(высота автоматически резинится под ширину)*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.infoAboutServiceCenterWithSliders .page_row .image-slider .swiper-button-prev::after {
+  color: #fff;
+  font-size: 60px;
+}
+.infoAboutServiceCenterWithSliders .page_row .image-slider .swiper-button-next::after {
+  color: #fff;
+  font-size: 60px;
+}
+.infoAboutServiceCenterWithSliders .page_row .image-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
   background-color: #c2c0c0;
+  border-radius: 0;
+  margin: 0 8px;
+}
+
+main section .infoAboutServiceCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*float: right;*/
+  /*max-width: 1200px;*/
+  /*overflow: auto;*/
+  /* свойство для прокрутки по горизонтали. Автоматом, если содержимое больше блока */
+  background-color: #c2c0c0;
+  /*@extend %bordersBlocks;*/
+}
+main section .infoAboutServiceCenter .a0 {
+  font-size: 30px;
+}
+main section .infoAboutServiceCenter .a1 {
+  font-size: 20px;
+  color: black;
+}
+main section .infoAboutServiceCenter .a2 {
+  font-size: 20px;
+  color: black;
+  transform: translate(0px, 130%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+main section .infoAboutServiceCenter .a2._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+main section .infoAboutServiceCenter .a2_text {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+main section .infoAboutServiceCenter .a2_text._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.4s;
+}
+main #with_1912px .grid {
+  display: flex;
+  text-align: center;
+  /*@extend %bordersBlocks; */
+}
+main #with_1912px .grid .one-section {
+  flex: 0 1 33.333%;
+  background-color: #c2c0c0;
+  transform: scale(0.8);
+  transition: all 0.8s ease 0s;
+}
+main #with_1912px .grid .one-section .text_1 {
+  height: 160px;
+  /*Увеличивает блоки с текстом*/
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+main #with_1912px .grid .one-section .text_1 .main_p {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  list-style: none;
+}
+main #with_1912px .grid .one-section .text_1 .li {
+  font-size: 20px;
+  text-align: left;
+  /*padding: 0px 17px;*/
+  list-style-type: none;
+  /*list-style-image: url(images/icon_stars.svg);*/
+  position: relative;
+}
+main #with_1912px .grid .one-section .text_1 .li::before {
+  /*content: url(images/icon_stars.svg);*/
+  /*Если не задать content, то псевдо-элемент не появится*/
+  content: "";
+  background-image: url(C:/Users/persw/Desktop/website2Version_2/images/icon_stars.svg);
+  /*background-image: url(../img/icon/mark_yes.svg); если */
+  background-size: contain;
+  /*css файл в отдельном файле*/
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+main #with_1912px .grid .one-section .text_2 {
+  height: 300px;
+  /*Увеличивает блоки с текстом*/
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+main #with_1912px .grid .one-section .text_2 .main_p {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  list-style: none;
+}
+main #with_1912px .grid .one-section .text_2 .li {
+  font-size: 20px;
+  text-align: left;
+  /*padding: 0px 17px;*/
+  list-style-type: none;
+  /*list-style-image: url(images/icon_stars.svg);*/
+  position: relative;
+}
+main #with_1912px .grid .one-section .text_2 .li::before {
+  /*content: url(images/icon_stars.svg);*/
+  /*Если не задать content, то псевдо-элемент не появится*/
+  content: "";
+  background-image: url(C:/Users/persw/Desktop/website2Version_2/images/icon_stars.svg);
+  /*background-image: url(../img/icon/mark_yes.svg); если */
+  background-size: contain;
+  /*css файл в отдельном файле*/
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+main #with_1912px .grid .one-section .grid_repair_item {
+  width: 100%;
+  opacity: 1;
+  text-align: center;
+}
+main #with_1912px .grid .one-section .grid_repair_item:hover {
+  opacity: 0.7;
+}
+main #with_1912px .grid .one-section._active {
+  transform: scale(1);
+}
+main #with_1912px .grid .one-section:not(:last-child) {
+  margin-right: 5px;
+}
+main #with_1912px .grid .one-section:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 1s;
+}
+main #with_1912px .section_1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+main #with_1912px .section_2 {
+  margin-bottom: 10px;
+}
+main #our_advantages {
+  /*@extend %bordersBlocks;*/
+  /*margin-bottom: 10px;*/
+}
+main #our_advantages .h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  /*Интервалы между буквами*/
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+main #our_advantages .h3._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+main #our_advantages .icons {
+  /*Для кроссбраузерности здесь стоит добавить префиксные свойства*/
+  display: flex;
+}
+main #our_advantages .icons .icon {
+  flex: 0 1 33.333%;
+  /*border-right: 1px solid black;
+  border-top: 1px solid black;*/
+  text-align: center;
+  padding: 5px;
+}
+main #our_advantages .icons .icon .icon_item {
+  display: inline-block;
+  /* div(block - элементы) делаем inline элементами*/
+  width: 100px;
+  height: 100px;
+  background-color: #c2c0c0;
+  text-align: center;
+  /*Чтобы картинка была по центру фона (по оси X)*/
+  border-radius: 50%;
+  /*Делаем фон круглым*/
+}
+main #our_advantages .icons .icon .icon_item .icon_item_image {
+  /*max-width: 100%;*/
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /*По оси Y картинка будет по центру*/
+}
+main #our_advantages .icons .icon .about_icon_info {
+  font-size: 25px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+main #our_advantages .icons .icon .info_h5 {
+  font-size: 20px;
+  padding: 3px;
+  word-wrap: break-word;
+  /*Перенос строк автоматически, чтобы слово поместилось в заданную ширину блока*/
+  line-height: 1.5;
+}
+main #our_advantages .icons .icon:nth-of-type(1) {
+  transform: translate(-120%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+main #our_advantages .icons .icon:nth-of-type(2) {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+main #our_advantages .icons .icon:nth-of-type(3) {
+  transform: translate(120%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+main #our_advantages .icons .icon._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+main #our_advantages .icons .icon._active:nth-of-type(2) {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.1s;
+}
+main .tables {
+  text-align: center;
+  /*@extend %bordersBlocks;*/
+  cursor: cell;
+}
+main .tables .h5 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+main .tables .h5._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+main .tables div .section_1_tables {
+  background-color: #d6d6d6;
+}
+main .tables div .table_1 {
+  width: 100%;
+}
+main .tables div .table_1 .tables_names {
+  background-color: #c2c0c0;
+}
+main .tables div .table_1 .tables_names .left_no_padding {
+  text-align: left;
+}
+main .tables div .table_1 tr {
+  opacity: 0;
+}
+main .tables div .table_1 tr._active {
+  opacity: 1;
+  transition: all 0.8s ease 0.5s;
+}
+main .tables div .table_1 .left {
+  text-align: left;
+  padding-left: 50px;
+}
+main .form {
+  margin-top: 10px;
+  padding: 10px;
+  cursor: help;
+  opacity: 0;
+}
+main .form .form_input._error {
+  box-shadow: 0 0 15px red;
+}
+main .form .form_body fieldset #areaKharkiv {
+  display: none;
+}
+main .form._active {
+  opacity: 1;
+  transition: all 0.8s ease 0.5s;
+}
+main .wrapper_accordion .accordion .accordion-item {
+  margin-аtab_section: 10px;
+  cursor: pointer;
+}
+main .wrapper_accordion .accordion .accordion-item .accordion-item_trigger {
+  padding: 10px;
+}
+main .wrapper_accordion .accordion .accordion-item .accordion-item_content {
+  border-top: none;
+  padding: 10px;
+  display: none;
+}
+main .wrapper_accordion .accordion .accordion-item:hover {
+  background-color: #c2c0c0;
+}
+main .sortable_list {
+  text-align: left;
+}
+main .sortable_list .sort .sortable {
+  padding: 0;
+}
+main .sortable_list .sort .sortable li {
+  height: 20px;
+  padding: 10px;
+  width: 60px;
+  cursor: pointer;
+  display: inline-block;
+}
+main .sortable_list .sort .sortable li:hover {
+  background-color: #c2c0c0;
+}
+main .tab_section .tabs ul {
+  padding: 0;
+}
+main .tab_section .tabs ul li {
+  display: inline-block;
+}
+main .tab_section .tabs ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  /*Делаем ссылки блочными элементами*/
+  padding: 8px 12px;
+  /*Сверху снизу по 8 пикселей, справа слева по 12*/
+  text-decoration: none;
+  /*Чтобы ссылки не подчеркивались*/
+  text-transform: uppercase;
+  /*Свойство - делает все буквы верхним регистром*/
+  position: relative;
+}
+main .tab_section .tabs ul li a:hover {
+  background-color: #c2c0c0;
+}
+main .tab_section .tabs ul li a::before {
+  content: "";
+  /*Если не задать content, то псевдо-элемент не появится*/
+  bottom: 0;
+  right: 0;
+  /*Указываем что этот элемент будет находиться снизу справа*/
+  position: absolute;
+  width: 0%;
+  /*Займет 100% ширины ссылки*/
+  height: 1px;
+  background-color: black;
+  transition: 0.2s;
+}
+main .tab_section .tabs ul li a:hover:before {
+  width: 100%;
+  left: 0;
+}
+main .tab_section .tabs ul li a:hover {
+  /*color: blue;*/
+  /*background-color: #c2c0c0;*/
+  /*box-shadow: inset 0 0 0 3px grey;*/
+  transition: 0.05s;
+  transform: scale(1.02);
+  /*При наведении блок будет увеличиваться*/
+  text-decoration: none;
+}
+main .tab_section .tabs ul li a:active {
+  font-weight: 900;
 }
 
 .footer {
+  margin: 0;
+  margin-top: 10px;
   background-color: #c2c0c0;
+  padding: 10px;
+  height: 45px;
+}
+.footer .content_1200px {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer .content_1200px .social_networks_item {
+  vertical-align: middle;
+  display: inline-block;
+}
+.footer .youtube_link {
+  display: inline-block;
+}
+.footer .youtube_link .youtube_link_size {
+  height: 40px;
+  width: 55px;
 }

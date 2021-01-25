@@ -1,0 +1,719 @@
+@import '_variables1'; /*Подключили файл с mixin и переменными*/
+%bordersBlocks {
+	border: 1px solid black;
+}
+	
+body  
+{
+	/*font: 16px/1.2 'Times New Roman';*/ /*Свойство - позволяет одновременно задать несколько характеристик шрифта и текста.
+	Первое значение размер/межстрочное расстояние шрифта, второе шрифт*/
+	background-color: map-get($colors, generalBackground); 
+	margin: 0;
+	padding: 0;	
+	
+}
+section
+{
+	
+}
+main
+{
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wrapper
+{
+	margin: 0;
+	padding: 0;
+	.header
+	{
+		width: auto;	
+		text-align: left;
+		height: 60px;
+		width: auto;
+		text-align: center;
+		background-color: map-get($colors, secondBackground);
+		.content_1200px
+		{
+			max-width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+			.inline-header
+			{	
+				.image_avat_normal
+				{
+					width: 60px;
+					vertical-align: middle;
+				}
+				#nameSite_h1
+				{
+					font-size: 30px;	
+					font-weight: 900;	
+				}
+				#nameSite
+				{
+					display: block;
+					float: left; /*В следующем пропишем clear: both;*/
+				}
+				#sidebar
+				{
+					/*clear: both;
+					display: inline-block;*/
+					
+					/*padding-right: 20px;*/
+					font-size: 20px;
+					.flex_right
+					{
+						display: flex;
+						justify-content: flex-end;
+					}
+				}				
+			}
+		}
+	}
+	
+	section
+	{
+		.navi 
+		{
+			.nav_mobile_menu
+			{ 
+				text-align: right;
+				margin-top: 10px;
+				display: none; /*Эта кнопка(также аватарка и поиск уже добавил сюда) для меню будет скрыта, и доступна только с мобильных устройств*/
+				text-align: justify; /*свойство text-align: justify; выравнивает текст по-ширине,*/
+				/*но кроме последней строки, последняя строка выравнивается по-левому краю*/
+				.image_avat
+				{
+					display: inline-block;
+					margin-left: 25px;
+					display: inline-block;
+					width: 100px;
+					height: 100px;
+					background-color: map-get($colors, secondBackground);
+					text-align: center; /*Чтобы картинка была по центру фона (по оси X)*/
+					border-radius: 50%; /*Делаем фон круглым*/
+					.image_avat_position
+					{
+						position: relative;
+						top: 50%;
+						transform: translateY(-50%);
+					}
+				}
+				.search_position
+				{
+					display: inline-block;
+				}
+				.mobile_menu 
+				{
+					/*float: right;*/  /*Распологает кнопку на одном уровне со слайдером*/
+					border: 0;
+					background: none;
+					padding: 5px;
+					cursor: pointer;
+					/*cursor: url(images/cursor_PNG88.png), auto;*/ /*При наведении будет указатель в виде пальца*/
+					border-radius: 10px;
+					margin-right: 25px;
+					/*margin-left: 25px;*/
+					.mobile_menu_item
+					{
+						display: block; /*Чтобы нормально задавать ширину и высоту*/
+						/*width: 20px;
+						height: 2px;*/
+						border-radius: 1px;
+						background-color: black;
+						/*padding: 0.3px;*/
+						margin-bottom: 3px;
+						width: 50px;
+						height: 5px;
+					}
+					.mobile_menu_item:last-child
+					{
+						margin-bottom: 0px;
+					}
+				}
+				.mobile_menu:hover {
+					background-color: map-get($colors, secondBackground);
+				}
+			}
+			.nav_mobile_menu:after /*=> создаем  псевдо-элемент display: inline-block; после всего что есть */
+			{  
+				content: ''; /*и задаю ему width: 100%; чтобы он гарантированно занимал последнюю строчку, */
+				width: 100%; /*тем самым позволяя всему что выше выравниваться по-ширине*/
+				display: inline-block;
+			}
+			#navi-main
+			{
+				padding-left: 0px;
+				.line_top_bottom_menu
+				{
+					display: inline-block;
+					border-top: 1px solid black;	
+					/*border-bottom: 1px solid black;	*/	
+					li
+					{
+						.img_href_menu
+						{
+							display: inline;
+							weight: 20px;
+							height: 20px;
+						}
+						
+					}
+					ul
+					{
+						display: none;	
+					}
+				}
+			}
+			.content_1200px
+			{
+				max-width: 1200px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			ul
+			{
+				text-align: center; /*Делает пункты меню по центру.*/
+				list-style: none; /*Чтобы небыло кружочков от тега ul*/
+				li
+				{
+					display: inline-block; 
+					a
+					{
+						@include href(black, #c2c0c0);
+					}
+					
+				}
+			}
+		}
+	}
+}
+.infoAboutServiceCenterWithSliders
+{
+	margin: 0;
+	padding: 0;
+	/*width: 70%;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;*/
+	.page_row
+	{
+		width: 100%;
+		display: inline-block; /*Нужно, чтобы наш слайдер занимал пространство только под свой контент, и не больше
+		до этого выделялось все оранжевым*/
+		.image-slider 
+		{
+			.image-slider_wrapper
+			{
+				margin-bottom: 5px;
+				.image-slider_slide
+				{
+					.image-slider_image
+					{
+						.slider_item 
+						{
+							/*background-image: url(images/slide_1.jpg);*/
+							padding-top: 33.7%;
+							/*Высота слайдера, автоматически резинится(высота автоматически резинится под ширину)*/
+							background-position: center center;
+							background-repeat: no-repeat;
+							background-size: cover;
+							@extend %bordersBlocks;
+						}
+					}
+				}
+			}
+			.swiper-button-prev::after
+			{
+				color: #fff;
+				font-size: 60px;
+			}
+			.swiper-button-next::after
+			{
+				color: #fff;
+				font-size: 60px;
+			}
+			.swiper-pagination
+			{
+				
+			}
+			.swiper-pagination-bullet 
+			{
+				width: 20px;
+				height: 20px;
+				background-color: map-get($colors, secondBackground);
+				border-radius: 0;	
+				margin: 0 8px;
+			}
+		}
+	}
+}
+main
+{
+	section
+	{
+		.infoAboutServiceCenter
+		{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			/*float: right;*/
+			/*max-width: 1200px;*/
+			/*overflow: auto;*/ /* свойство для прокрутки по горизонтали. Автоматом, если содержимое больше блока */
+			background-color: map-get($colors, secondBackground);
+						
+			/*@extend %bordersBlocks;*/
+			.a0
+			{
+				font-size: 30px;
+			}
+			.a1
+			{
+				font-size: 20px;
+				color: black;
+			}
+			.a2
+			{
+				font-size: 20px;
+				color: black;
+				
+				transform: translate(0px, 130%);
+				opacity: 0;
+				transition: all 0.8s ease 0s;
+			}
+			.a2._active
+			{
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
+			.a2_text
+			{
+				transform: translate(0px, 120%);
+				opacity: 0;
+				transition: all 0.8s ease 0s;
+			}
+			.a2_text._active
+			{
+				transform: translate(0px, 0px);
+				opacity: 1;
+				transition: all 0.8s ease 0.4s;
+			}
+
+		}
+	}
+	#with_1912px
+	{
+		.grid 
+		{
+			
+			display: flex;
+			text-align: center;
+			/*@extend %bordersBlocks; */
+			.one-section
+			{
+				flex: 0 1 33.333%;
+			
+				
+				background-color: map-get($colors, secondBackground);
+				
+				transform: scale(0.8);
+				transition: all 0.8s ease 0s;
+				.text_1
+				{
+					height: 160px; /*Увеличивает блоки с текстом*/
+					padding: 0; 
+					margin-left: 10px;
+					margin-right: 10px;
+					.main_p /*Названия блоков*/
+					{
+						margin: 0;
+						font-size: 30px;
+						text-align: center;
+						list-style: none;
+					}
+					.li
+					{
+						font-size: 20px;
+						text-align: left;
+						/*padding: 0px 17px;*/
+						list-style-type: none;
+						/*list-style-image: url(images/icon_stars.svg);*/
+						position: relative;
+					}
+					.li::before
+					{
+						/*content: url(images/icon_stars.svg);*/ /*Если не задать content, то псевдо-элемент не появится*/
+						content: '';
+						background-image: url(C:/Users/persw/Desktop/website2Version_2/images/icon_stars.svg); /*background-image: url(../img/icon/mark_yes.svg); если */
+						background-size: contain;  /*css файл в отдельном файле*/
+						width: 25px;
+						height: 25px;  
+						display: inline-block;
+						padding: 0;
+						margin: 0;	
+						vertical-align: middle;
+						margin-left: 10px;
+						margin-right: 10px;
+					}
+				}
+				.text_2
+				{
+					height: 300px; /*Увеличивает блоки с текстом*/
+					padding: 0; 
+					margin-left: 10px;
+					margin-right: 10px;
+					.main_p /*Названия блоков*/
+					{
+						margin: 0;
+						font-size: 30px;
+						text-align: center;
+						list-style: none;
+					}
+					.li
+					{
+						font-size: 20px;
+						text-align: left;
+						/*padding: 0px 17px;*/
+						list-style-type: none;
+						/*list-style-image: url(images/icon_stars.svg);*/
+						position: relative;
+					}
+					.li::before
+					{
+						/*content: url(images/icon_stars.svg);*/ /*Если не задать content, то псевдо-элемент не появится*/
+						content: '';
+						background-image: url(C:/Users/persw/Desktop/website2Version_2/images/icon_stars.svg); /*background-image: url(../img/icon/mark_yes.svg); если */
+						background-size: contain;  /*css файл в отдельном файле*/
+						width: 25px;
+						height: 25px;  
+						display: inline-block;
+						padding: 0;
+						margin: 0;		
+						vertical-align: middle;
+						margin-left: 10px;
+						margin-right: 10px;
+					}
+				}
+				.grid_repair_item
+				{
+					width: 100%;
+					opacity: 1.0;
+					text-align: center;
+				}
+				.grid_repair_item:hover
+				{
+					opacity: 0.7;
+				}
+			}
+			.one-section._active
+			{
+				transform: scale(1);
+			}
+			.one-section:not(:last-child)
+			{
+				margin-right: 5px;
+			}
+			.one-section:hover
+			{
+					background: rgba(0, 0, 0, 0.3);
+					color: white;
+					transition: 1.0s;
+			}	
+		}
+		.section_1
+		{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.section_2
+		{
+			margin-bottom: 10px;
+		}
+	}
+	#our_advantages
+	{
+		
+		
+		/*@extend %bordersBlocks;*/
+		/*margin-bottom: 10px;*/
+		.h3
+		{
+			text-align: center;	
+			font-size: 30px;
+			font-weight: 900;
+			letter-spacing: 2px; /*Интервалы между буквами*/	
+			
+			transform: translate(0px, 120%);
+			opacity: 0;
+			transition: all 0.8s ease 0s;
+		}	
+		.h3._active
+		{
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+		.icons
+		{
+			display: -webkit-box; /*Для кроссбраузерности здесь стоит добавить префиксные свойства*/
+			display: -ms-flexbox;
+			display: flex;
+
+			
+			.icon
+			{
+				flex: 0 1 33.333%;
+				/*border-right: 1px solid black;
+				border-top: 1px solid black;*/
+				text-align: center;
+				padding: 5px;
+				.icon_item
+				{
+					display: inline-block; /* div(block - элементы) делаем inline элементами*/
+					width: 100px;
+					height: 100px;
+					background-color: map-get($colors, secondBackground);
+					text-align: center; /*Чтобы картинка была по центру фона (по оси X)*/
+					border-radius: 50%; /*Делаем фон круглым*/
+					.icon_item_image
+					{
+						/*max-width: 100%;*/
+						position: relative;
+						top: 50%;
+						transform: translateY(-50%); /*По оси Y картинка будет по центру*/
+					}
+				}
+				.about_icon_info
+				{
+					font-size: 25px;
+					margin-top: 3px; 
+					margin-bottom: 3px;
+				}
+				.info_h5
+				{
+					font-size: 20px;
+					padding: 3px;
+					word-wrap: break-word; /*Перенос строк автоматически, чтобы слово поместилось в заданную ширину блока*/
+					line-height: 1.5;
+				}
+			}	
+			.icon:nth-of-type(1)
+			{
+				transform: translate(-120%, 0px);
+				opacity: 0;
+				transition: all 0.8s ease 0s;
+			}
+			.icon:nth-of-type(2)
+			{
+				
+				transform: translate(0px, 120%);
+				opacity: 0;
+				transition: all 0.8s ease 0s;
+			}
+			.icon:nth-of-type(3)
+			{
+				
+				transform: translate(120%, 0px);
+				opacity: 0;
+				transition: all 0.8s ease 0s;
+			}
+			.icon._active
+			{
+				transform: translate(0px, 0px);
+				opacity: 1;
+			}
+			.icon._active:nth-of-type(2)
+			{
+				transform: translate(0px, 0px);
+				opacity: 1;
+				transition: all 0.8s ease 0.1s;
+			}
+			
+		}
+	}
+	.tables
+	{
+		text-align: center;
+		/*@extend %bordersBlocks;*/
+		cursor: cell;
+		.h5
+		{
+			text-align: center;
+			font-size: 30px;
+			letter-spacing: 2px; 
+			
+			transform: translate(0px, 120%);
+			opacity: 0;
+			transition: all 0.8s ease 0s;
+		}
+		.h5._active
+		{
+			transform: translate(0px, 0px);
+			opacity: 1;	
+		}
+		div
+		{
+			.section_1_tables
+			{
+				background-color: map-get($colors, generalBackground);
+			}
+			.table_1
+			{
+				width: 100%;
+				.tables_names
+				{
+					background-color: map-get($colors, secondBackground);
+					.left_no_padding
+					{
+						text-align: left;
+					}
+				}
+				tr
+				{
+					opacity: 0;
+				}
+				tr._active
+				{
+					opacity: 1;		
+					transition: all 0.8s ease 0.5s;					
+				}
+				.left
+				{
+					text-align: left;
+					padding-left: 50px;
+				}
+			}
+		}
+	}
+	
+	.form
+	{
+		margin-top: 10px;
+		padding: 10px;
+		@extend %bordersBlocks;
+		cursor: help;
+		opacity: 0;
+		.form_input._error
+		{
+			box-shadow: 0 0 15px red;
+		}
+		.form_body 
+		{
+			fieldset
+			{
+				#areaKharkiv
+				{
+					display: none;
+				}
+			}
+		}
+	}
+	.form._active
+	{
+		opacity: 1;
+		transition: all 0.8s ease 0.5s;		
+	}
+	.wrapper_accordion
+	{
+		.accordion
+		{
+			.accordion-item
+			{
+				margin-аtab_section: 10px;
+				cursor: pointer;
+				.accordion-item_trigger
+				{
+					@extend %bordersBlocks;
+					padding: 10px;
+				}
+				.accordion-item_content
+				{
+					@extend %bordersBlocks;
+					border-top: none;
+					padding: 10px;
+					display: none;
+				}
+			}
+			.accordion-item:hover
+			{
+				background-color: map-get($colors, secondBackground);
+			}
+		}
+	}
+	.sortable_list
+	{
+		text-align: left;
+		.sort
+		{
+			.sortable
+			{
+				padding: 0;
+				li 
+				{
+					height: 20px;
+					padding: 10px;
+					@extend %bordersBlocks;
+					width: 60px;
+					cursor:pointer;
+					display: inline-block;
+				}
+				li:hover
+				{
+					background-color: map-get($colors, secondBackground);
+				}
+			}
+		}
+	}
+	.tab_section
+	{
+		.tabs
+		{
+			ul 
+			{
+				padding: 0;
+				li 
+				{
+					display: inline-block;
+					a 
+					{
+						text-decoration: none;
+						@include href(black, #c2c0c0);
+						@extend %bordersBlocks;
+					}
+				}
+			}
+		}
+	}
+}
+.footer
+{
+	margin: 0;
+	margin-top: 10px;
+	background-color: map-get($colors, secondBackground);
+	padding: 10px;
+	height: 45px;
+	.content_1200px
+	{
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		.social_networks_item
+		{
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+	.youtube_link
+	{
+		display: inline-block;
+		.youtube_link_size
+		{
+			height: 40px;
+			width: 55px;
+		}
+	}
+}
+
+
