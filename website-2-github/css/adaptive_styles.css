@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*$color: #c2c0c0;*/
+/*Переменная - задает цвет для элементов (темно-серый)*/
+/*mixin - это функция*/
+/*Подключили файл с mixin и переменными*/
+@media (max-width: 1200px) {
+  main {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .wrapper .header .container .inline-header #nameSite_h1 #nameSite {
+    display: none;
+  }
+  .wrapper .header .container .inline-header #nameSite_h1 #sidebar {
+    /*.flex_right:nth-child(1):after
+    {
+    	content: "+38(095)461-17-92";	
+    }
+    .flex_right:nth-child(2):after
+    {
+    	content: "+38(050)542-74-81";
+    }*/
+  }
+  .wrapper .header .container .inline-header #nameSite_h1 #sidebar .flex_right {
+    justify-content: center;
+  }
+
+  main {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .infoAboutServiceCenterWithSliders .page_row .image-slider .image-slider_wrapper .image-slider_slide .image-slider_image .slider_item {
+    padding-top: 50%;
+  }
+
+  main {
+    max-width: none;
+    padding: 0px 15px;
+  }
+  main #with_1912px .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  main #with_1912px .grid .one-section:not(:last-child) {
+    margin-right: 0;
+  }
+  main #our_advantages .icons {
+    display: flex;
+    flex-direction: column;
+  }
+  main #our_advantages .icons .icon {
+    /*flex: 0 1 33.333%;*/
+  }
+}
+@media screen and (max-width: 1085px) {
+  .wrapper .header .header-main {
+    height: 48px;
+  }
+  .wrapper .header .header-main .container .inline-header #nameSite_h1 #nameSite .image_avat_normal {
+    display: none;
+  }
+  .wrapper .header .navi .nav_mobile_menu {
+    display: block;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu {
+    border-top: 0px solid black;
+    border-bottom: 0px solid black;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li {
+    display: block;
+    /*Или в столбик - display: block; или в строку display: inline-block;*/
+    text-align: left;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li .aiming {
+    color: black;
+    display: block;
+    /*Делаем ссылки блочными элементами*/
+    padding: 8px 12px;
+    /*Сверху снизу по 8 пикселей, справа слева по 12*/
+    text-decoration: none;
+    /*Чтобы ссылки не подчеркивались*/
+    text-transform: uppercase;
+    /*Свойство - делает все буквы верхним регистром*/
+    position: relative;
+    /*z-index: 3;*/
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li .aiming:hover {
+    background-color: #c2c0c0;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li .aiming::before {
+    content: "";
+    /*Если не задать content, то псевдо-элемент не появится*/
+    bottom: 0;
+    right: 0;
+    /*Указываем что этот элемент будет находиться снизу справа*/
+    position: absolute;
+    width: 0%;
+    /*Займет 100% ширины ссылки*/
+    height: 1px;
+    background-color: black;
+    transition: 0.2s;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li .aiming:hover:before {
+    width: 100%;
+    left: 0;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li .aiming:hover {
+    /*color: blue;*/
+    /*background-color: #c2c0c0;*/
+    /*box-shadow: inset 0 0 0 3px grey;*/
+    transition: 0.05s;
+    transform: scale(1.02);
+    /*При наведении блок будет увеличиваться*/
+    text-decoration: none;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li .aiming:active {
+    font-weight: 900;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li .search_normal {
+    display: none;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li .sub-menu_list {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .wrapper .header .navi #navi-main .line_top_bottom_menu li .sub-menu_list li .sub-sub-menu_list {
+    /*position: relative;
+    left: 0;
+    top: 0;*/
+  }
+  .wrapper .header .navi ul {
+    display: none;
+  }
+  .wrapper .header .navi .navi-main-open {
+    display: block;
+    background-color: #c2c0c0;
+    margin-left: 25px;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  body.touch .wrapper .header .navi #navi-main .line_top_bottom_menu li .sub-menu_list li {
+    background: yellow;
+  }
+  body.touch .wrapper .header .navi #navi-main .line_top_bottom_menu li .sub-menu_list li .sub-menu_arrow {
+    right: 10px;
+    border-left: 10px solid transparent;
+    border-top: 10px solid black;
+    border-right: 10px solid transparent;
+  }
+  body.touch .wrapper .header .navi #navi-main .line_top_bottom_menu li .sub-menu_list li .sub-sub-menu_list {
+    padding: 0px 5px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  body.touch .wrapper .header .navi #navi-main .line_top_bottom_menu li .sub-menu_list li .sub-sub-menu_list li {
+    background: green;
+  }
+  body.touch .wrapper .header .navi .navi-main-open {
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+}
+/*Значения определяющие тип устройства */
+/*@media all (orientation:portrait)
+{
+
+}*/
+/*
+	all - все типы устройсв(значение по умолчанию
+	print - к документам предварительного просмотра печати  
+	screen - для цветных мониторов компьютеров
+	speech - для различных синтезаторов речи
+*/
+/*
+	orientation - отвечает за положение устройства(портретное или альбомное). Указываем orientation:portrait или :landscape
+	resolution - разрешение, не размер экрана - это именно количество точек на дюйм. Указывая плотность пикселей, указываем на каких устройствах будут эти
+		стили. Также можно указывать max-resolution / min-resolution 
+	monochrome - когда наш сайт откроется на черно-белом экране
+
+	max-width: 767px - будут применяться если ширина меньше 768 пикселей 
+	max-height: 767px
+
+	min-width: 767px - сработает на экранах больше 767 пикселей
+	min-height: 767px
+*/
+/*
+ Можно комбинировать с логическими операторами
+@media screen and (max-width: 767px) Таким образом свойства сработают только на цветных экранах и при размере экрана меньше 768 пикселей
+{
+
+}
+
+	and - и
+	or - или (так же можно указать запятую вместо or (, == or)
+
+@media screen and (max-width: 992px) , screen and (max-height: 700px)
+{
+
+}
+*/
+/*
+	Метод Mobile First - это когда мы сначала делаем сайт для мобильных устройств а потом пишем медиа запросы, но не с условием max-width, а с min-width
+		То есть наоборот, мы будем расширять экран а не сужать его.
+*/
